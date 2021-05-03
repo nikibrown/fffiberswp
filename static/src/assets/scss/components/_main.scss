@@ -1,0 +1,15 @@
+main {
+    a {
+        color: $brand-blue;
+        &:hover {
+            color: darken($brand-blue, 15%);
+            text-decoration: none;
+        }
+    }
+
+    aside {
+    }
+
+    article {
+    }
+}

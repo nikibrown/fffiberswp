@@ -1,0 +1,28 @@
+footer {
+    background-color: $brand-navy;
+    color: $white;
+
+    padding: 2.25rem 0;
+    a {
+        color: $white;
+        &:hover {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+}
+
+.social-nav {
+    text-align: left;
+    @include media-breakpoint-up(lg) {
+        text-align: right;
+    }
+
+    .fa-facebook-f {
+        margin-right: 20px;
+    }
+}

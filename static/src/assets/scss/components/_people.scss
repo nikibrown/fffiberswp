@@ -1,0 +1,14 @@
+.bio {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.bio-headshot {
+    margin-right: 20px;
+}
+
+.bio-details {
+    border-top: 5px solid $brand-med-gray;
+    padding: 20px 0 10px 0;
+    flex-basis: 100%;
+}

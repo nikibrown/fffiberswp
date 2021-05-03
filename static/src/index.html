@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('inc/head.html')
+    <body>
+        @@include('inc/header-inner.html')
+        <main>
+            <div class="container">
+                @@include('inc/secondary-nav.html')
+
+                <article>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="lead-section">
+                                <p class="lead">
+                                    Introductory content area leads into overview pages lorem ipsum
+                                    dolor sit amet, consectetur adipiscing euismod augue vitae augue
+                                    placerat, ultricies.
+                                </p>
+
+                                <p>
+                                    Phasellus dictum imperdiet neque eu tempor. Morbi nulla magna,
+                                    malesuada quis tortor lobortis, vestibulum ultricies erat. Donec
+                                    dapibus, nibh in pulvinar tristique, mi nisl rhoncus magna, in
+                                    gravida mauris urna eu tellus. Nullam justo turpis, tincidunt eu
+                                    est nec, semper tincidunt elit. Maecenas placerat ante et enim
+                                    placerat aliquam. Aliquam erat volutpat.
+                                </p>
+                            </div>
+
+                            <p>
+                                Phasellus dictum imperdiet neque eu tempor. Morbi nulla magna,
+                                malesuada quis tortor lobortis, vestibulum ultricies erat. Donec
+                                dapibus, nibh in pulvinar tristique, mi nisl rhoncus magna, in
+                                gravida mauris urna eu tellus. Nullam justo turpis, tincidunt eu est
+                                nec, <a href="">semper tincidunt elit</a>. Maecenas placerat ante et
+                                enim placerat aliquam. Aliquam erat volutpat.
+                            </p>
+
+                            <h2>Heading 2 lorem ipsum dolor</h2>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta id
+                                nobis tempora illo dolorum beatae assumenda, eveniet quia,
+                                exercitationem impedit, minus fuga! Incidunt velit expedita labore
+                                recusandae magni nemo aliquid!
+                            </p>
+
+                            <h3>Heading 3 lorem sit amet</h3>
+
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta id
+                                nobis tempora illo dolorum beatae assumenda, eveniet quia,
+                                exercitationem impedit, minus fuga! Incidunt velit expedita labore
+                                recusandae magni nemo aliquid!
+                            </p>
+
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta id
+                                nobis tempora illo dolorum beatae assumenda, eveniet quia,
+                                exercitationem impedit, minus fuga! Incidunt velit expedita labore
+                                recusandae magni nemo aliquid!
+                            </p>
+
+                            <ul>
+                                <li>This is a list item</li>
+
+                                <li>Another list item with more text!</li>
+
+                                <li>A third item for good measure</li>
+                            </ul>
+
+                            <ol>
+                                <li>This is a ordered list item</li>
+
+                                <li>ABC, 123 Another list item with more text!</li>
+
+                                <li>A third item for good measure</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <figure>
+                                <img
+                                    src="https://via.placeholder.com/700x500?text=Placeholder"
+                                    alt=""
+                                    class="img-fluid"
+                                />
+                                <figcaption>
+                                    Sample caption et pharetra enim, mollis sodales ligula. Morbi
+                                    ullamcorper vitae risus id sed sollicitudin augue.
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-lg-6">
+                            <figure>
+                                <img
+                                    src="https://via.placeholder.com/700x500?text=Placeholder"
+                                    alt=""
+                                    class="img-fluid"
+                                />
+                                <figcaption>
+                                    Sample caption et pharetra enim, mollis sodales ligula. Morbi
+                                    ullamcorper vitae risus id sed sollicitudin augue.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">@@include('inc/accordion-table.html')</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3>Researchers</h3>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam at
+                                iste sequi quidem totam ducimus ad assumenda obcaecati quibusdam
+                                expedita commodi hic recusandae tenetur illo nostrum molestiae
+                                omnis, laudantium quod?
+                            </p>
+                        </div>
+                        @@include('inc/people.html')
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12"><h3>Publications</h3></div>
+                        <div class="col-lg-4">
+                            <select class="custom-select custom-select-lg mb-3 select-filter1">
+                                <option value="filter-area-all">View by Research Area</option>
+                                <option value="filter-all">All Research Areas</option>
+                                <option value="filter-physiology">Physiology</option>
+                                <option value="filter-ecology">Ecology</option>
+                                <option value="filter-behavior">Behavior</option>
+                                <option value="filter-modeling">Modeling</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4">
+                            <select class="custom-select custom-select-lg mb-3 select-filter2">
+                                <option value="filter-all">View by Author</option>
+                                <option value="filter-all">All Authors</option>
+                                <option value="filter-author1">Author 1</option>
+                                <option value="filter-author2">Author 2</option>
+                                <option value="filter-author3">Author 3</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4">
+                            <select class="custom-select custom-select-lg mb-3">
+                                <option selected>View by XYZ</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <h3><span class="year">2021</span></h3>
+                            <ul class="publications list-unstyled">
+                                <li
+                                    class="publication-single filter-physiology filter-author1 filter-author2 filter-all"
+                                >
+                                    <h3>
+                                        <a href="">Publication Title lorem ipsum dolor sit</a>
+                                    </h3>
+                                    <p><em>March 15, 2021, Optional Journal Name</em></p>
+                                    <p>
+                                        <a href="">PRiME Author 1</a>,
+                                        <a href="">PRiME Author 2</a>, Another Author, These author
+                                        lists can be long Morbi nulla magna, malesuada quis tortor
+                                        lobortis, vestibulum ultricies erat. Donec dapibus, nibh in
+                                        pulvinar tristique, mi nisl rhoncus magna, in gravida mauris
+                                        urna eu tellus. Nullam justo turpis
+                                    </p>
+
+                                    <p><strong>Research Areas:</strong> Physiology</p>
+
+                                    <p
+                                        class="abstract-link"
+                                        data-toggle="collapse"
+                                        data-target="#abstract1"
+                                    >
+                                        Abstract <i class="fas fa-caret-right"></i>
+                                    </p>
+
+                                    <div class="abstract-details collapse" id="abstract1">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Assumenda, numquam officiis? Perferendis neque molestias
+                                            veritatis, distinctio impedit eveniet fuga atque porro
+                                            modi placeat aut magni minima debitis cumque dicta
+                                            nostrum?
+                                        </p>
+
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Assumenda, numquam officiis? Perferendis neque molestias
+                                            veritatis, distinctio impedit eveniet fuga atque porro
+                                            modi placeat aut magni minima debitis cumque dicta
+                                            nostrum?
+                                        </p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="publication-single filter-ecology filter-author2 filter-all"
+                                >
+                                    <h3>
+                                        <a href="">Publication Title lorem ipsum dolor sit</a>
+                                    </h3>
+                                    <p><em>March 15, 2021, Optional Journal Name</em></p>
+                                    <p>
+                                        <a href="">PRiME Author 2</a>, Another Author, These author
+                                        lists can be long Morbi nulla magna, malesuada quis tortor
+                                        lobortis, vestibulum ultricies erat. Donec dapibus, nibh in
+                                        pulvinar tristique, mi nisl rhoncus magna, in gravida mauris
+                                        urna eu tellus. Nullam justo turpis
+                                    </p>
+
+                                    <p><strong>Research Areas:</strong> Ecology</p>
+
+                                    <p
+                                        class="abstract-link"
+                                        data-toggle="collapse"
+                                        data-target="#abstract2"
+                                    >
+                                        Abstract <i class="fas fa-caret-right"></i>
+                                    </p>
+
+                                    <div class="abstract-details collapse" id="abstract2">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Assumenda, numquam officiis? Perferendis neque molestias
+                                            veritatis, distinctio impedit eveniet fuga atque porro
+                                            modi placeat aut magni minima debitis cumque dicta
+                                            nostrum?
+                                        </p>
+
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Assumenda, numquam officiis? Perferendis neque molestias
+                                            veritatis, distinctio impedit eveniet fuga atque porro
+                                            modi placeat aut magni minima debitis cumque dicta
+                                            nostrum?
+                                        </p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="publication-single filter-behavior filter-author3 filter-all"
+                                >
+                                    <h3>
+                                        <a href="">Publication Title lorem ipsum dolor sit</a>
+                                    </h3>
+                                    <p><em>March 15, 2021, Optional Journal Name</em></p>
+                                    <p>
+                                        <a href="">PRiME Author 3</a>, Another Author, These author
+                                        lists can be long Morbi nulla magna, malesuada quis tortor
+                                        lobortis, vestibulum ultricies erat. Donec dapibus, nibh in
+                                        pulvinar tristique, mi nisl rhoncus magna, in gravida mauris
+                                        urna eu tellus. Nullam justo turpis
+                                    </p>
+
+                                    <p><strong>Research Areas:</strong> Behavior</p>
+
+                                    <p
+                                        class="abstract-link"
+                                        data-toggle="collapse"
+                                        data-target="#abstract3"
+                                    >
+                                        Abstract <i class="fas fa-caret-right"></i>
+                                    </p>
+
+                                    <div class="abstract-details collapse" id="abstract3">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Assumenda, numquam officiis? Perferendis neque molestias
+                                            veritatis, distinctio impedit eveniet fuga atque porro
+                                            modi placeat aut magni minima debitis cumque dicta
+                                            nostrum?
+                                        </p>
+
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Assumenda, numquam officiis? Perferendis neque molestias
+                                            veritatis, distinctio impedit eveniet fuga atque porro
+                                            modi placeat aut magni minima debitis cumque dicta
+                                            nostrum?
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+        @@include('inc/slider.html') @@include('inc/footer.html')
+    </body>
+</html>
