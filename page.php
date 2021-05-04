@@ -12,27 +12,36 @@
  * @package prime
  */
 
-get_header();
-?>
+ ?>
 
-	<main id="primary" class="site-main">
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+<?php get_header();?>
 
-			get_template_part( 'template-parts/content', 'page' );
+<main>
+    <div class="container">
+		<?php get_template_part( 'template-parts/secondary-nav'); ?>
+		<article>
+			<div class="row">
+				<div class="col-lg-12">
+					<?php if( get_field('lead_headline') ): ?>
+						<div class="lead-section">
+							<p class="lead">
+								<?php the_field("lead_headline"); ?>
+							</p>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+							<?php if( get_field('lead_intro_text') ): ?>
+								<?php the_field("lead_intro_text"); ?>
+							<?php endif; ?>
+						</div>
+					<?php endif; ?>
+					<?php the_content(); ?>
+				</div>
+		</div>
+	</article>
+</main>
+	
 
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php endwhile; endif; ?>
+	
+<?php get_footer(); ?>
