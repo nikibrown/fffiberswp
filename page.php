@@ -37,8 +37,9 @@
 					<?php endif; ?>
 					<?php the_content(); ?>
 				</div>
-		</div>
-	</article>
+			</div>
+		</article>
+	</div>
 </main>
 	
 
