@@ -30,10 +30,14 @@
 					<h2>Research Interests</h2>
 
 					<?php the_field("research_interests"); ?>
+
+
+					<p><a href="<?php echo esc_url( get_page_link( 153 ) ); ?>"><i class="fas fa-chevron-left"></i> Back to People</a></p>
 				</div>
 				<div class="col-lg-3">
 					<img src="<?php the_field("photo"); ?>" alt="<?php the_title(); ?>" class="img-fluid">
 				</div>
+
 			</div>
 		</article>
 	</div>

@@ -140,7 +140,7 @@
 						</tbody>
 					</table>
 
-					<a href="<?php echo esc_url( get_page_link( 104 ) ); ?>" class="btn btn-primary">See All Genomes</a>
+					<p class="text-right"><a href="<?php echo esc_url( get_page_link( 104 ) ); ?>" class="btn btn-primary-outline">See All Genomes</a></p>
 
 						<h3>Protocol Highlights</h3>
 
@@ -248,7 +248,7 @@
 						</tbody>
 					</table>
 
-					<a href="<?php echo esc_url( get_page_link( 125 ) ); ?>" class="btn btn-primary">See All Protocols</a>
+					<p class="text-right"><a href="<?php echo esc_url( get_page_link( 125 ) ); ?>" class="btn btn-primary-outline">See All Protocols</a></p>
 
 				
 

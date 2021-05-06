@@ -1,53 +1,45 @@
 <?php
 /**
- * The template for displaying search results pages
+ * The template for displaying all pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package prime
  */
 
-get_header();
-?>
+ ?>
 
-	<main id="primary" class="site-main">
+<?php if ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
+<?php get_header();?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'prime' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+<main>
+    <div class="container">
+		<?php get_template_part( 'template-parts/secondary-nav'); ?>
+		<article>
+			<div class="row">
+				<div class="col-lg-12">
+					<ul>
+						<?php while ( have_posts() ) : the_post(); ?>
+							<li>
+								<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+							</li>
+						<?php endwhile; endif; ?>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+					</ul>
+					
+			</div></div>
+			
+		</article>
+	</div>
+</main>
+	
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
 
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+	
+<?php get_footer(); ?>

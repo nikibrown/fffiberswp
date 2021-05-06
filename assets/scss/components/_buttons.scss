@@ -1,0 +1,38 @@
+.btn {
+	border-radius: 0;
+	border: 1px solid $brand-blue;
+    font-family: $gothambold;
+    font-size: 1.25rem;
+	padding: .25rem 2rem;
+    text-transform: uppercase;
+    
+	form & {
+		padding: .5rem 1rem;
+	}
+    &.btn-primary {
+        
+        background-color: $brand-blue;
+        
+        &:hover {
+            background-color: darken($brand-blue, 5%);
+        }
+
+        
+    }
+
+	&.btn-primary-outline {
+		background: $white;
+		color: $brand-blue;
+		&:hover {
+			background: $brand-blue;
+			color: $white;
+		}
+	}
+
+    &.btn-secondary {
+        background-color: $brand-purple;
+        &:hover {
+            background-color: darken($brand-purple, 5%);
+        }
+    }
+}

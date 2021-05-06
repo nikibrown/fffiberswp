@@ -97,7 +97,7 @@
 				</div>
 				
 				<div class="col-lg-3">
-					<p class="text-right"><a href="">Past Members</a></p>
+					<p class="text-right"><a href="<?php echo esc_url( get_page_link( 156 ) ); ?>">Past Members</a></p>
 				</div>
 			</div>
 			

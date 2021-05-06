@@ -19,7 +19,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4">
-						<p><a href="">www.simonsprime.org</a></p>
+						<p><a href="<?php bloginfo("url"); ?>">www.simonsprime.org</a></p>
 					</div>
 					<div class="col-lg-4">
 						<p>617.253.1000<br />
@@ -28,8 +28,8 @@
 					<div class="col-lg-4">
 						<nav class="social-nav">
 							<ul class="list-unstyled list-inline">
-								<li class="list-inline-item"><a href=""><i class="fab fa-facebook-f"></i></a></li>
-								<li class="list-inline-item"><a href=""><i class="fab fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="https://www.facebook.com/simonsfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+								<li class="list-inline-item"><a href="https://twitter.com/SimonsFdn" target="_blank"><i class="fab fa-twitter"></i></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -42,6 +42,9 @@
 
 		<?php wp_footer(); ?>
 		<script>
+
+			// TODO: move to .js file
+
 			$(document).ready(function() {
 
 				$('.logo-slider').slick({
@@ -96,33 +99,70 @@
 
 				// TODO = refactor into 1 function
 
+				// $(".select-filter1").change(function() {
+				// 	$(".publication-single").hide(); // ✔ 
+				// 	// get value of selected and add "."
+				// 	let $selected = "." + $(".select-filter1 option:selected").val(); // ✔ 
+				// 	console.log($selected);
+				// 	// show single publications that have selected class
+				// 	$(".publication-single" + $selected).show();
+
+				// 	// reset other select menus
+				// 	$("select").not(".select-filter1").prop('selectedIndex',0);
+				// });
+
+				// $(".select-filter2").change(function() {
+				// 	$(".publication-single").hide(); // ✔ 
+				// 	// get value of selected and add "."
+				// 	let $selected = "." + $(".select-filter2 option:selected").val(); // ✔ 
+				// 	console.log($selected);
+				// 	// show single publications that have selected class
+				// 	$(".publication-single" + $selected).show();
+
+				// 	// reset other select menus
+				// 	$("select").not(".select-filter2").prop('selectedIndex',0);
+				// });
+
+				// hide all .publication-single
+
+				// show all with selected classname from value of select menu
+
+
 				$(".select-filter1").change(function() {
-					$(".publication-single").hide(); // ✔ 
+					$(".filter-content-single").hide(); // ✔ 
 					// get value of selected and add "."
 					let $selected = "." + $(".select-filter1 option:selected").val(); // ✔ 
 					console.log($selected);
 					// show single publications that have selected class
-					$(".publication-single" + $selected).show();
+					$(".filter-content-single" + $selected).show();
 
 					// reset other select menus
 					$("select").not(".select-filter1").prop('selectedIndex',0);
 				});
 
 				$(".select-filter2").change(function() {
-					$(".publication-single").hide(); // ✔ 
+					$(".filter-content-single").hide(); // ✔ 
 					// get value of selected and add "."
 					let $selected = "." + $(".select-filter2 option:selected").val(); // ✔ 
 					console.log($selected);
 					// show single publications that have selected class
-					$(".publication-single" + $selected).show();
+					$(".filter-content-single" + $selected).show();
 
 					// reset other select menus
 					$("select").not(".select-filter2").prop('selectedIndex',0);
 				});
 
-				// hide all .publication-single
+				$(".select-filter3").change(function() {
+					$(".filter-content-single").hide(); // ✔ 
+					// get value of selected and add "."
+					let $selected = "." + $(".select-filter3 option:selected").val(); // ✔ 
+					console.log($selected);
+					// show single publications that have selected class
+					$(".filter-content-single" + $selected).show();
 
-				// show all with selected classname from value of select menu
+					// reset other select menus
+					$("select").not(".select-filter3").prop('selectedIndex',0);
+				});
 
 
 			}) ;

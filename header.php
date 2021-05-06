@@ -29,16 +29,17 @@
     <div class="container">
         <div class="header-inner">
             <div class="header-top">
-                <a href="#" class="logo">
+                <a href="<?php bloginfo("url"); ?>" class="logo">
                     <img src="<?php bloginfo('template_directory'); ?>/assets/img/prime.svg" alt="" />
                 </a>
 
                 <nav class="nav--utility">
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href=""><i class="fas fa-search fa-lg"></i></a>
+                            <a href="" data-toggle="modal" data-target="#searchmodal"><i class="fas fa-search fa-lg"></i></a>
                         </li>
-                        <li class="list-inline-item"><a href="">Contact Us</a></li>
+						<?php get_search_form(); ?>
+                        <li class="list-inline-item"><a href="<?php echo esc_url(get_page_link(186)); ?>">Contact Us</a></li>
                     </ul>
 
                     <p class="tagline">Principals of Microbial Ecosystems</p>
@@ -62,92 +63,76 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link dropdown-toggle"
-                                    href="#"
-                                    id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
+                                    href="<?php echo esc_url(get_page_link(174)); ?>"
+                                    
+                                    
                                     ><span>About</span>
                                 </a>
 
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">FAQs</a></li>
-                                    <li><a class="dropdown-item" href="#">Jobs</a></li>
-                                    <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(166)); ?>">FAQs</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(176)); ?>">Jobs</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(186)); ?>">Contact Us</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a
                                     class="nav-link dropdown-toggle"
-                                    href="#"
-                                    id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
+                                    href="<?php echo esc_url(get_page_link(135)); ?>"
+                                    
+                                    
                                     ><span>Research</span>
                                 </a>
 
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Physiology</a></li>
-                                    <li><a class="dropdown-item" href="#">Ecology</a></li>
-                                    <li><a class="dropdown-item" href="#">Behavior</a></li>
-                                    <li><a class="dropdown-item" href="#">Modeling</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(138)); ?>">Physiology</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(141)); ?>">Ecology</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(143)); ?>">Behavior</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(145)); ?>">Modeling</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a
                                     class="nav-link dropdown-toggle"
-                                    href="#"
-                                    id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
+                                    href="<?php echo esc_url(get_page_link(153)); ?>"
+                                    
                                     ><span>People</span>
                                 </a>
 
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Current Members</a></li>
-                                    <li><a class="dropdown-item" href="#">Past Members</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(153)); ?>">Current Members</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(156)); ?>">Past Members</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a
                                     class="nav-link dropdown-toggle"
-                                    href="#"
-                                    id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
+                                    href="<?php echo esc_url(get_page_link(58)); ?>"
+                                   
                                     ><span>Publications</span>
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a
                                     class="nav-link dropdown-toggle"
-                                    href="#"
-                                    id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
+                                    href="<?php echo esc_url(get_page_link(123)); ?>"
+                                    
+                                    
                                 >
                                     <span>Resources</span>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Genomes</a></li>
-                                    <li><a class="dropdown-item" href="#">Protocols</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(104)); ?>">Genomes</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(125)); ?>">Protocols</a></li>
                                     <li>
-                                        <a class="dropdown-item" href="#">Microfluidic Devices</a>
+                                        <a class="dropdown-item" href="<?php echo esc_url(get_page_link(132)); ?>">Microfluidic Devices</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a
                                     class="nav-link dropdown-toggle"
-                                    href="#"
-                                    id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
+                                    href="<?php echo esc_url(get_page_link(191)); ?>"
                                     ><span>Multimedia Gallery</span>
                                 </a>
                             </li>
@@ -159,10 +144,14 @@
 
         <div class="page-title-container">
             <div class="page-title">
-                <h1><?php the_title(); ?></h1>
+
+				<?php if ( is_search() ) { ?>
+
+					<h1><?php printf( esc_html__( 'Search Results for: %s', 'prime' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+                <?php } else { ?>
+					<h1><?php the_title(); ?></h1>
+				<?php } ?>
             </div>
         </div>
     </div>
 </header>
-
-

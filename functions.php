@@ -179,3 +179,55 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+/**
+ * Display taxonomy selection as dropdown
+ * https://codebriefly.com/amp/display-wordpress-custom-taxonomy-dropdown/
+ * @param WP_Post $post
+ * @param array $box
+ */
+function prime_taxonomy_select_meta_box($post, $box) 
+{
+  $defaults = array('taxonomy' => 'category');
+  
+  if (!isset($box['args']) || !is_array($box['args']))
+      $args = array();
+  else
+      $args = $box['args'];
+  
+  extract(wp_parse_args($args, $defaults), EXTR_SKIP);
+  
+  $tax = get_taxonomy($taxonomy);
+  $selected = wp_get_object_terms($post->ID, $taxonomy, array('fields' => 'ids'));
+  $hierarchical = $tax->hierarchical;
+  ?>
+  <div id="taxonomy-<?php echo $taxonomy; ?>" class="selectdiv">
+    <?php 
+      if (current_user_can($tax->cap->edit_terms)): 
+        if ($hierarchical) {
+          wp_dropdown_categories(array(
+           	'taxonomy' => $taxonomy,
+           	'class' => 'widefat',
+         	'hide_empty' => 0, 
+           	'name' => "tax_input[$taxonomy][]",
+           	'selected' => count($selected) >= 1 ? $selected[0] : '',
+           	'orderby' => 'name', 
+           	'hierarchical' => 1, 
+           	'show_option_all' => " "
+          ));
+        } else {?>
+          <select name="<?php echo "tax_input[$taxonomy][]"; ?>" class="widefat">
+            <option value="0"></option>
+            <?php foreach (get_terms($taxonomy, array('hide_empty' => false)) as $term): ?>
+              <option value="<?php echo esc_attr($term->slug); ?>" <?php echo selected($term->term_id, count($selected) >= 1 ? $selected[0] : ''); ?>><?php echo esc_html($term->name); ?></option>
+            <?php endforeach; ?>
+          </select>
+        <?php 
+        }
+      endif; 
+    ?>
+  </div>
+  <?php
+}
+

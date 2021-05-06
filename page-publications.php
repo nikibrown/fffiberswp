@@ -59,8 +59,8 @@
 						<?php $args = array(
 							'post_type' => array( 'profiles' ),
 							'numberposts' => -1,	
-							'orderby'        => 'title',
-							'order'          => 'DESC'
+							'orderby'        => 'last_name',
+							'order'          => 'ASC'
 						);
 
 						// The Query
@@ -110,32 +110,49 @@
 
 						
 
-						<h3><span class="year"><?php the_field("year"); ?></span></h3>
-							<li class="publication-single
-						
-								<?php foreach ( get_the_terms( get_the_ID(), 'research_area' ) as $tax ) {
-									echo 'filter-' . strtolower($tax->name); 
-								} ?>
-								
-								<?php if( have_rows('principal_authors') ): while( have_rows('principal_authors') ): the_row();  ?>
+							<li class="publication-single filter-content-single
 
-								<?php $principle_author = get_sub_field('principle_author'); 
+								<?php $hasterms = get_the_term_list( get_the_ID(), 'research_area'); ?>
 
-									if( $principle_author ): 
-										$principle_author_title = $principle_author['title'];
-										$nameclass = strtolower(str_replace(' ', '', $principle_author_title));
+								<?php if( $hasterms) { ?>
 					
-									?>
+									<?php foreach ( get_the_terms( get_the_ID(), 'research_area' ) as $tax ) {
+										echo 'filter-' . strtolower($tax->name); 
+									} ?>
+								<?php } ?>
 								
-									filter-author-<?php echo $nameclass; ?>
+									<?php if( have_rows('principal_authors') ): while( have_rows('principal_authors') ): the_row();  ?>
 
-									<?php endif; ?>
+									<?php $principle_author = get_sub_field('principle_author'); 
 
-								<?php endwhile;  endif; ?>
+										if( $principle_author ): 
+											$principle_author_title = $principle_author['title'];
+											$nameclass = strtolower(str_replace(' ', '', $principle_author_title));
+						
+										?>
+							
+											filter-author-<?php echo $nameclass; ?>
+
+										<?php endif; ?>
+
+									<?php endwhile;  endif; ?>
+								
 								
 								filter-all
 							">
+
+							<?php if( get_field('publication_url') ) { ?>
+
+								
 								<h3><a href="<?php the_field("publication_url"); ?>"><?php the_title(); ?></a></h3>
+							<?php } else if( get_field('publication_file') ) { ?>
+								<h3><a href="<?php the_field("publication_file"); ?>"><?php the_title(); ?></a></h3>
+
+								<?php } else { ?>
+									<h3><?php the_title(); ?></h3>
+
+								<?php } ?>
+							
 								
 
 								<?php the_field("publication_file"); ?>
@@ -160,17 +177,25 @@
 
 								 	<?php endwhile;  endif; ?>
 
-									<?php the_field("authors"); ?>
+									 <?php if( get_field('authors') ): ?>
+
+										<?php the_field("authors"); ?>
+									<?php endif; ?>
 								</div>
 
 								
+							
+
+								<?php $hasterms = get_the_term_list( get_the_ID(), 'research_area'); ?>
+
+								<?php if( $hasterms) { ?>
+									<p><strong>Research Area: </strong> 
+										<?php foreach ( get_the_terms( get_the_ID(), 'research_area' ) as $tax ) {
+											echo '<span>' . __( $tax->name ) . '</span>';
+										} ?>
+									</p>
+								<?php } ?>
 								
-
-								<p><strong>Research Area: </strong> 
-								<?php foreach ( get_the_terms( get_the_ID(), 'research_area' ) as $tax ) {
-									echo '<span>' . __( $tax->name ) . '</lspan';
-								} ?></p>
-
 								<?php $post_id = get_the_ID(); ?>
 
 								<p class="abstract-link" data-toggle="collapse" data-target="#abstract<?php echo $post_id; ?>">
