@@ -34,14 +34,9 @@
 							<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
 								<li>
-									<?php if( get_field('publication_url') ) { ?>
-										<h4><a href="<?php the_field("publication_url"); ?>"><?php the_title(); ?></a></h4>
-									<?php } else if( get_field('publication_file') ) { ?>
-										<h4><a href="<?php the_field("publication_file"); ?>"><?php the_title(); ?></a></h4>
-									<?php } else { ?>
-										<h4><?php the_title(); ?></h4>
-									<?php } ?>
-
+									
+									<h4><?php the_title(); ?></h4>
+									
 									<div class="authors">
 										<p>
 											<!--$string = substr($string,0,10).'...';-->
@@ -53,7 +48,7 @@
 														$principle_author_url = $principle_author['url'];
 														$principle_author_title = $principle_author['title'];?>
 														
-														<span><a  href="<?php echo esc_url( $principle_author_url ); ?>"><?php echo esc_html( $principle_author_title ); ?></a>, </span> 
+														<span><a href="<?php echo esc_url( $principle_author_url ); ?>"><?php echo esc_html( $principle_author_title ); ?></a>, </span> 
 													<?php endif; ?>
 
 

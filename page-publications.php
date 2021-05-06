@@ -35,6 +35,8 @@
 							<?php endif; ?>
 						</div>
 					<?php endif; ?>
+
+					<?php the_content(); ?>
 				</div>
 			</div>
 		<?php endwhile; endif; ?>

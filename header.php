@@ -144,10 +144,10 @@
 
         <div class="page-title-container">
             <div class="page-title">
-
 				<?php if ( is_search() ) { ?>
-
 					<h1><?php printf( esc_html__( 'Search Results for: %s', 'prime' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<?php } else if ( is_404() ) { ?>
+					<h1><?php esc_html_e( '404 Page Not Found', 'prime' ); ?></h1>
                 <?php } else { ?>
 					<h1><?php the_title(); ?></h1>
 				<?php } ?>
