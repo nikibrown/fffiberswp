@@ -16,7 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -25,7 +24,12 @@
 
 
 
-<header style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/img/header-bg.jpg')">
+<?php if( get_field('header_background_image') ){ ?>
+	<header style="background-image: url('<?php the_field("header_background_image"); ?>')">
+<? } else { ?>
+	<header style="background-image: url('<?php the_field("default_header_background_image" , 'option'); ?>')">
+<?php }  ?>
+
     <div class="container">
         <div class="header-inner">
             <div class="header-top">
@@ -33,18 +37,18 @@
                     <img src="<?php bloginfo('template_directory'); ?>/assets/img/prime.svg" alt="" />
                 </a>
 
-                <nav class="nav--utility">
+ 				<nav class="nav--utility">
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href="" data-toggle="modal" data-target="#searchmodal"><i class="fas fa-search fa-lg"></i></a>
+                             <a href="" data-toggle="modal" data-target="#searchmodal"><i class="fas fa-search fa-lg"></i></a>
                         </li>
 						<?php get_search_form(); ?>
-                        <li class="list-inline-item"><a href="<?php echo esc_url(get_page_link(186)); ?>">Contact Us</a></li>
+                        <li class="list-inline-item"><a href="">Contact Us</a></li>
                     </ul>
 
                     <p class="tagline">Principals of Microbial Ecosystems</p>
-                </nav>
-            </div>
+            	</nav>
+			</div>
             <div class="header-bottom">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <button
@@ -86,7 +90,7 @@
 
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(138)); ?>">Physiology</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(141)); ?>">Ecology</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(141)); ?>">Communities</a></li>
                                     <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(143)); ?>">Behavior</a></li>
                                     <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(145)); ?>">Modeling</a></li>
                                 </ul>

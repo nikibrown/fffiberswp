@@ -69,7 +69,6 @@
 						<?php endwhile; endif; ?>
 						<?php wp_reset_postdata(); ?>
 
-
 					</select>
 				</div>
 
@@ -83,7 +82,7 @@
 						<option value="filter-lab-;ab4">Lab 4</option>
 
 						<!-- loop through labs -->
-						<!-- Lab might need to be a custom taxonomy -->
+						<!-- Lab might need to be a custom taxonomy for people? -->
 					</select>
 				</div>
 				<div class="col-lg-3">
@@ -92,7 +91,7 @@
 						<option value="filter-area-all">View by Research Area</option>
 						<option value="filter-all">All Research Areas</option>
 						<option value="filter-physiology">Physiology</option>
-						<option value="filter-ecology">Ecology</option>
+						<option value="filter-communities">Communities</option>
 						<option value="filter-behavior">Behavior</option>
 						<option value="filter-modeling">Modeling</option>
 					</select>
@@ -125,12 +124,11 @@
 									hide-content
 								<?php } ?>
 
-								<?php $hasterms = get_the_term_list( get_the_ID(), 'research_area'); ?>
+								<?php $hasterms = get_the_term_list( get_the_ID(), 'research_areas'); ?>
 
 								<?php if( $hasterms) { ?>
-					
-									<?php foreach ( get_the_terms( get_the_ID(), 'research_area' ) as $tax ) {
-										echo 'filter-' . strtolower($tax->name); 
+									<?php foreach ( get_the_terms( get_the_ID(), 'research_areas' ) as $tax ) {
+										echo 'filter-' . strtolower($tax->name) . ' '; 
 									} ?>
 								<?php } ?>
 
@@ -165,12 +163,12 @@
 											<strong>Lab: </strong><?php the_field("lab"); ?>
 										</p>
 
-										<?php $hasterms = get_the_term_list( get_the_ID(), 'research_area'); ?>
+										<?php $hasterms = get_the_term_list( get_the_ID(), 'research_areas'); ?>
 
 										<?php if( $hasterms) { ?>
-											<p><strong>Research Area: </strong> 
-												<?php foreach ( get_the_terms( get_the_ID(), 'research_area' ) as $tax ) {
-													echo '<span>' . __( $tax->name ) . '</span>';
+											<p><strong>Research Areas: </strong> 
+												<?php foreach ( get_the_terms( get_the_ID(), 'research_areas' ) as $tax ) {
+													echo '<span>' . __( $tax->name ) . '</span> ';
 												} ?>
 											</p>
 										<?php } ?>

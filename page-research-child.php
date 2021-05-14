@@ -56,7 +56,7 @@
 							'order'          => 'ASC',
 							'tax_query' => array(
 								array(
-									'taxonomy' => 'research_area',   // taxonomy name
+									'taxonomy' => 'research_areas',   // taxonomy name
 									'field' => 'slug',           // term_id, slug or name
 									'terms' => $termstring,                  // term id, term slug or term name
 								)

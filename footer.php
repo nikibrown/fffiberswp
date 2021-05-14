@@ -11,32 +11,33 @@
 
 ?>
 
-
-
-
-
-		<footer>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4">
-						<p><a href="<?php bloginfo("url"); ?>">www.simonsprime.org</a></p>
-					</div>
-					<div class="col-lg-4">
-						<p>617.253.1000<br />
-							<a href="mailto:info@simonsprime.org">info@simonsprime.org</a></p>
-					</div>
-					<div class="col-lg-4">
-						<nav class="social-nav">
-							<ul class="list-unstyled list-inline">
-								<li class="list-inline-item"><a href="https://www.facebook.com/simonsfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-								<li class="list-inline-item"><a href="https://twitter.com/SimonsFdn" target="_blank"><i class="fab fa-twitter"></i></a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-				
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<p><a href="<?php bloginfo("url"); ?>">www.simonsprime.org</a></p>
 			</div>
-		</footer>
+			<div class="col-lg-4">
+			
+				<p><?php the_field('phone', 'option'); ?><br />
+					<a href="<?php the_field('email', 'option'); ?>"><?php the_field('email', 'option'); ?></a></p>
+			</div>
+			<div class="col-lg-4">
+				<nav class="social-nav">
+					<ul class="list-unstyled list-inline">
+						<?php if( get_field('facebook_url', 'option') ): ?>
+							<li class="list-inline-item"><a href="<?php the_field('facebook_url', 'option'); ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+						<?php endif; ?>
+						<?php if( get_field('twitter_url', 'option') ): ?>
+							<li class="list-inline-item"><a href="<?php the_field('twitter_url', 'option'); ?>" target="_blank"><i class="fab fa-twitter"></i></a></li>
+						<?php endif; ?>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+	</div>
+</footer>
 
 		
 

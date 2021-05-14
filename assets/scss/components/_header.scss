@@ -1,7 +1,6 @@
 header {
-    @include media-breakpoint-up(lg) {
-        background-size: cover;
-    }
+    
+    background-size: cover;
 
     .header-top {
         @extend .d-md-flex;

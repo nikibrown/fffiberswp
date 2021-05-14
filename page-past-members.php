@@ -131,11 +131,11 @@
 									hide-content 
 								<?php } ?>
 
-								<?php $hasterms = get_the_term_list( get_the_ID(), 'research_area'); ?>
+								<?php $hasterms = get_the_term_list( get_the_ID(), 'research_areas'); ?>
 
 								<?php if( $hasterms) { ?>
 					
-									<?php foreach ( get_the_terms( get_the_ID(), 'research_area' ) as $tax ) {
+									<?php foreach ( get_the_terms( get_the_ID(), 'research_areas' ) as $tax ) {
 										echo 'filter-' . strtolower($tax->name); 
 									} ?>
 								<?php } ?>
@@ -171,12 +171,12 @@
 											<strong>Lab: </strong><?php the_field("lab"); ?>
 										</p>
 
-										<?php $hasterms = get_the_term_list( get_the_ID(), 'research_area'); ?>
+										<?php $hasterms = get_the_term_list( get_the_ID(), 'research_areas'); ?>
 
 										<?php if( $hasterms) { ?>
-											<p><strong>Research Area: </strong> 
-												<?php foreach ( get_the_terms( get_the_ID(), 'research_area' ) as $tax ) {
-													echo '<span>' . __( $tax->name ) . '</span>';
+											<p><strong>Research Areas: </strong> 
+												<?php foreach ( get_the_terms( get_the_ID(), 'research_areas' ) as $tax ) {
+													echo '<span>' . __( $tax->name ) . '</span> ';
 												} ?>
 											</p>
 										<?php } ?>

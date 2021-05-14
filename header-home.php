@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme
+ * The header for the homepage
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
@@ -16,7 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -24,8 +23,13 @@
 <?php wp_body_open(); ?>
 
 
+<?php if( get_field('header_background_image') ){ ?>
+	<header style="background-image: url('<?php the_field("header_background_image"); ?>')">
+<? } else { ?>
+	<header style="background-image: url('<?php the_field("default_header_background_image", 'option'); ?>')">
+<?php }  ?>
 
-<header style="background-image: url('<?php the_field("header_background_image"); ?>')">
+
     <div class="container">
         <div class="header-inner">
             <div class="header-top">
@@ -64,10 +68,7 @@
                                 <a
                                     class="nav-link dropdown-toggle"
                                     href="<?php echo esc_url(get_page_link(174)); ?>"
-                                    id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
+                                    
                                     ><span>About</span>
                                 </a>
 
@@ -81,16 +82,13 @@
                                 <a
                                     class="nav-link dropdown-toggle"
                                     href="<?php echo esc_url(get_page_link(135)); ?>"
-                                    id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
+                                   
                                     ><span>Research</span>
                                 </a>
 
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(138)); ?>">Physiology</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(141)); ?>">Ecology</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(141)); ?>">Communities</a></li>
                                     <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(143)); ?>">Behavior</a></li>
                                     <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(145)); ?>">Modeling</a></li>
                                 </ul>
@@ -99,10 +97,7 @@
                                 <a
                                     class="nav-link dropdown-toggle"
                                     href="<?php echo esc_url(get_page_link(153)); ?>"
-                                    id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
+                                   
                                     ><span>People</span>
                                 </a>
 
@@ -123,10 +118,7 @@
                                 <a
                                     class="nav-link dropdown-toggle"
                                     href="<?php echo esc_url(get_page_link(123)); ?>"
-                                    id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
+                                    
                                 >
                                     <span>Resources</span>
                                 </a>

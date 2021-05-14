@@ -48,7 +48,7 @@
 						<option value="filter-area-all">View by Research Area</option>
 						<option value="filter-all">All Research Areas</option>
 						<option value="filter-physiology">Physiology</option>
-						<option value="filter-ecology">Ecology</option>
+						<option value="filter-communities">Communities</option>
 						<option value="filter-behavior">Behavior</option>
 						<option value="filter-modeling">Modeling</option>
 					</select>
@@ -114,11 +114,11 @@
 
 							<li class="publication-single filter-content-single
 
-								<?php $hasterms = get_the_term_list( get_the_ID(), 'research_area'); ?>
+								<?php $hasterms = get_the_term_list( get_the_ID(), 'research_areas'); ?>
 
 								<?php if( $hasterms) { ?>
 					
-									<?php foreach ( get_the_terms( get_the_ID(), 'research_area' ) as $tax ) {
+									<?php foreach ( get_the_terms( get_the_ID(), 'research_areas' ) as $tax ) {
 										echo 'filter-' . strtolower($tax->name); 
 									} ?>
 								<?php } ?>
@@ -188,12 +188,12 @@
 								
 							
 
-								<?php $hasterms = get_the_term_list( get_the_ID(), 'research_area'); ?>
+								<?php $hasterms = get_the_term_list( get_the_ID(), 'research_areas'); ?>
 
 								<?php if( $hasterms) { ?>
-									<p><strong>Research Area: </strong> 
-										<?php foreach ( get_the_terms( get_the_ID(), 'research_area' ) as $tax ) {
-											echo '<span>' . __( $tax->name ) . '</span>';
+									<p><strong>Research Areas: </strong> 
+										<?php foreach ( get_the_terms( get_the_ID(), 'research_areas' ) as $tax ) {
+											echo '<span>' . __( $tax->name ) . '</span> ';
 										} ?>
 									</p>
 								<?php } ?>
