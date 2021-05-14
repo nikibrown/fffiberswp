@@ -20,7 +20,6 @@
 
 <main>
     <div class="container">
-		<?php get_template_part( 'template-parts/secondary-nav'); ?>
 		<article>
 			<div class="row">
 				<div class="col-lg-12">

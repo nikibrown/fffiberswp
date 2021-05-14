@@ -43,7 +43,7 @@
                              <a href="" data-toggle="modal" data-target="#searchmodal"><i class="fas fa-search fa-lg"></i></a>
                         </li>
 						<?php get_search_form(); ?>
-                        <li class="list-inline-item"><a href="">Contact Us</a></li>
+                        <li class="list-inline-item"><a href="<?php echo esc_url(get_page_link(186)); ?>">Contact Us</a></li>
                     </ul>
 
                     <p class="tagline">Principals of Microbial Ecosystems</p>
