@@ -15,7 +15,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4">
-				<p><a href="<?php bloginfo("url"); ?>">www.simonsprime.org</a></p>
+				<p><a href="<?php bloginfo("url"); ?>">www.primecollaboration.org</a></p>
 			</div>
 			<div class="col-lg-4">
 			

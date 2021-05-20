@@ -42,47 +42,22 @@
 		<?php endwhile; endif; ?>
 
 			<div class="row">
-				<div class="col-lg-3">
-					<select class="custom-select custom-select-lg mb-3 select-filter1">
-						<option value="filter-all">View by Author</option>
-						<option value="filter-all">All Authors</option>
-
-						<?php $args = array(
-							'post_type' => array( 'profiles' ),
-							'numberposts' => -1,	
-							'orderby'        => 'last_name',
-							'order'          => 'ASC'
-						);
-
-						// The Query
-						$query = new WP_Query( $args ); ?>
-
-						<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-
-						<?php 
-							$name = get_the_title();
-							$nameclass = strtolower(str_replace(' ', '', $name));
-						?>
-
-							<option value="filter-author-<?php echo $nameclass; ?>"><?php the_title(); ?></option>
-							
-						<?php endwhile; endif; ?>
-						<?php wp_reset_postdata(); ?>
-
-					</select>
-				</div>
+				
 
 				<div class="col-lg-3">
 					<select class="custom-select custom-select-lg mb-3 select-filter2">
 						<option value="filter-all">View by Lab</option>
 						<option value="filter-all">All Labs</option>
-						<option value="filter-lab-mit">MIT</option>
-						<option value="filter-lab-zurich">Zurich</option>
-						<option value="filter-lab-lab3">Lab 3</option>
-						<option value="filter-lab-;ab4">Lab 4</option>
-
-						<!-- loop through labs -->
-						<!-- Lab might need to be a custom taxonomy for people? -->
+						<option value="filter-lab-ackermannlab">Ackermann Lab</option>
+						<option value="filter-lab-bonhoefferlab">Bonhoeffer Lab</option>
+						<option value="filter-lab-corderolab">Cordero Lab</option>
+						<option value="filter-lab-gorelab">Gore Lab</option>
+						<option value="filter-lab-hwalab">Hwa Lab</option>
+						<option value="filter-lab-levinelab">Levine Lab</option>
+						<option value="filter-lab-moranlab">Moran Lab</option>
+						<option value="filter-lab-orphanlab">Orphan Lab</option>
+						<option value="filter-lab-sauerlab">Sauer Lab</option>
+						<option value="filter-lab-stockerlab">Stocker Lab</option>
 					</select>
 				</div>
 				<div class="col-lg-3">
@@ -95,6 +70,9 @@
 						<option value="filter-behavior">Behavior</option>
 						<option value="filter-modeling">Modeling</option>
 					</select>
+				</div>
+
+				<div class="col-lg-3">
 				</div>
 				
 				<div class="col-lg-3">

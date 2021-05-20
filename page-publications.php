@@ -41,10 +41,9 @@
 			</div>
 		<?php endwhile; endif; ?>
 
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-lg-4">
 					<select class="custom-select custom-select-lg mb-3 select-filter1">
-						<!-- Loop through custom taxonomy terms -->
 						<option value="filter-area-all">View by Research Area</option>
 						<option value="filter-all">All Research Areas</option>
 						<option value="filter-physiology">Physiology</option>
@@ -86,14 +85,11 @@
 				<div class="col-lg-4">
 					
 				</div>
-			</div>
+			</div> -->
 			
 			<div class="row">
 				<div class="col-lg-12">
 
-					<!-- TODO: somehow list year only once -->
-
-					<!-- <h3><span class="year">2021</span></h3> -->
 
 					<ul class="publications list-unstyled">
 			
@@ -158,8 +154,12 @@
 								
 
 								<?php the_field("publication_file"); ?>
-								
-								<p><em><?php the_field("publication_date"); ?>, </em><?php the_field("journal_name"); ?></p>
+
+								<?php if( get_field('publication_date') ) { ?>
+									<p><em><?php the_field("publication_date"); ?>, </em><?php the_field("journal_name"); ?></p>
+								<?php } else { ?>
+									<p><?php the_field("journal_name"); ?></p>
+								<?php } ?>
 
 								<!-- TODO: WYSIWYG for now - cant get relationship query to display inside wp_query -->
 

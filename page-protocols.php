@@ -22,9 +22,23 @@
     <div class="container">
 		<!-- TODO: make subnavs works -->
 		<?php get_template_part( 'template-parts/secondary-nav'); ?>
+		
+			
 		<article>
 			<div class="row">
 				<div class="col-lg-12">
+					<?php if( get_field('lead_headline') ): ?>
+						<div class="lead-section">
+							<p class="lead">
+								<?php the_field("lead_headline"); ?>
+							</p>
+
+							<?php if( get_field('lead_intro_text') ): ?>
+								<?php the_field("lead_intro_text"); ?>
+							<?php endif; ?>
+						</div>
+					<?php endif; ?>
+		
 					<table class="table accordion-table">
 						<thead>
 							<tr>
