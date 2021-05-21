@@ -63,3 +63,19 @@
         margin-left: 0;
     }
 }
+
+
+.home {
+	header {
+		.page-title {
+			h1 {
+
+				font-size: 1.25rem;
+
+				@include media-breakpoint-up(md) {
+					font-size: 2.125rem;
+				}
+			}
+		}
+	}
+}

@@ -155,14 +155,6 @@
 
 								<?php the_field("publication_file"); ?>
 
-								<?php if( get_field('publication_date') ) { ?>
-									<p><em><?php the_field("publication_date"); ?>, </em><?php the_field("journal_name"); ?></p>
-								<?php } else { ?>
-									<p><?php the_field("journal_name"); ?></p>
-								<?php } ?>
-
-								<!-- TODO: WYSIWYG for now - cant get relationship query to display inside wp_query -->
-
 								<div class="authors">
 									<?php if( have_rows('principal_authors') ): while( have_rows('principal_authors') ): the_row();  ?>
 
@@ -184,6 +176,16 @@
 										<?php the_field("authors"); ?>
 									<?php endif; ?>
 								</div>
+
+								<?php if( get_field('publication_date') ) { ?>
+									<p><em><?php the_field("publication_date"); ?>, </em><?php the_field("journal_name"); ?></p>
+								<?php } else { ?>
+									<p><?php the_field("journal_name"); ?></p>
+								<?php } ?>
+
+								<!-- TODO: WYSIWYG for now - cant get relationship query to display inside wp_query -->
+
+								
 
 								
 							

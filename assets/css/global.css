@@ -7421,6 +7421,12 @@ main a {
     .home-news {
       margin-left: 0; } }
 
+.home header .page-title h1 {
+  font-size: 1.25rem; }
+  @media (min-width: 768px) {
+    .home header .page-title h1 {
+      font-size: 2.125rem; } }
+
 .btn {
   border-radius: 0;
   border: 1px solid #1f7da5;
