@@ -235,4 +235,7 @@ function wpdocs_remove_post_type_support() {
 add_action( 'init', 'wpdocs_remove_post_type_support', 10 );
 
 
+add_image_size( 'multimedia-thumb', 345, 225, array( 'left', 'top' ) );
+
+
 ?>

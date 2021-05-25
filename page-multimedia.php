@@ -63,14 +63,21 @@
 								</div>
 							
 								<div class="modal-body">
+
+								<?php 
+									$image = get_field('image');
+									$url = $image['url'];
+								?>
 									<?php if( get_field('video') ): ?>
 									<div class="embed-container">
 										<?php the_field('video'); ?>
 									</div>
 									<?php endif; ?>
 
+
 									<?php if( get_field('image') ): ?>
-										<img src="<?php the_field('image'); ?>" alt="<?php the_title(); ?>" class="img-fluid" />	
+										
+										<img src="<?php echo $url ?>" alt="<?php the_title(); ?>" class="img-fluid" />	
 									<?php endif; ?>
 								</div>
 							
@@ -82,6 +89,11 @@
 					<div class="col-lg-4 d-flex align-items-stretch">
 
 						<div class="card" data-toggle="modal" data-target="#modal-<?php echo $id; ?>">
+							<?php 
+								
+								$size = 'multimedia-thumb';
+								$thumb = $image['sizes'][ $size ];
+							?>
 							<?php if( get_field('video') ): ?>
 								<div class="embed-container">
 									<?php the_field('video'); ?>
@@ -89,7 +101,10 @@
 							<?php endif; ?>
 
 							<?php if( get_field('image') ): ?>
-								<img src="<?php the_field('image'); ?>" alt="<?php the_title(); ?>" />	
+								<!-- <img src="<?//php the_field('image'); ?>" alt="<?//php the_title(); ?>" />	 -->
+
+								<img src="<?php echo esc_url($thumb); ?>" alt="<?php the_title(); ?>" />
+
 							<?php endif; ?>
 							<div class="card-body">
 								<h4 class="card-title"><?php the_title(); ?></h4>
