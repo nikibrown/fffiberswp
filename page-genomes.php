@@ -69,42 +69,27 @@
 
 								<tr class="details collapse" id="details<?php echo $post_id; ?>">
 									<td colspan="4">
-										<table>
+										<table width="100%">
 											<tr>
-												<td>
+												<td width="45%">
 													<div class="details-item">
 														<h4><?php the_field("details_heading_1"); ?></h4>
 														<?php the_field("details_text_1"); ?>
 													</div>
 												</td>
-												<td>
+												<td width="30%">
 													<div class="details-item">
 														<h4><?php the_field("details_heading_2"); ?></h4>
 														<?php the_field("details_text_2"); ?>
 													</div>
 												</td>
 
-												<td>
+												<td width="25%">
 													<div class="details-item">
 														<h4><?php the_field("details_heading_3"); ?></h4>
 														<?php the_field("details_text_3"); ?>
 													</div>
 												</td>
-											</tr>
-											<tr>
-												<td>
-													<div class="details-item">
-														<h4><?php the_field("details_heading_4"); ?></h4>
-														<?php the_field("details_text_4"); ?>
-													</div>
-												</td>
-												<td>
-													<div class="details-item">
-														<h4><?php the_field("details_heading_5"); ?></h4>
-														<?php the_field("details_text_5"); ?>
-													</div>
-												</td>
-												<td></td>
 											</tr>
 										</table>
 									</td>
