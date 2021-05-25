@@ -46,7 +46,7 @@
                         <li class="list-inline-item"><a href="<?php echo esc_url(get_page_link(186)); ?>">Contact Us</a></li>
                     </ul>
 
-                    <p class="tagline">Principals of Microbial Ecosystems</p>
+                    <p class="tagline">Principles of Microbial Ecosystems</p>
                 </nav>
             </div>
             <div class="header-bottom">
@@ -101,10 +101,10 @@
                                     ><span>People</span>
                                 </a>
 
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <!--<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(153)); ?>">Current Members</a></li>
                                     <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(156)); ?>">Past Members</a></li>
-                                </ul>
+                                </ul>-->
                             </li>
                             <li class="nav-item">
                                 <a
