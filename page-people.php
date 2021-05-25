@@ -145,9 +145,23 @@
 
 										<?php if( $hasterms) { ?>
 											<p><strong>Research Areas: </strong> 
+
+												<?php  
+													$research_areas = get_the_terms( get_the_ID(), 'research_areas' );
+													$length = count($research_areas);
+													$count = 1; 
+												?>
+
 												<?php foreach ( get_the_terms( get_the_ID(), 'research_areas' ) as $tax ) {
-													echo '<span>' . __( $tax->name ) . '</span> ';
+													
+													if ($count == $length ) {
+														echo '<span>'  . __( $tax->name ) . '</span> ';
+													} else {
+														echo '<span>'  . __( $tax->name ) . '</span>, ';
+													}
+													$count++;
 												} ?>
+												
 											</p>
 										<?php } ?>
 
