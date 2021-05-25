@@ -22,6 +22,8 @@
 
 	<style>
 
+		<?php // current page navigation for template-parts/secondary-nav.php ?>
+
 		.page-id-<?php echo $id; ?> .page-id-<?php echo $id; ?> {
 			background-color: white!important;
 		}
