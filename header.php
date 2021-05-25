@@ -17,6 +17,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
+
+	<?php $id = get_the_ID(); ?>
+
+	<style>
+
+		.page-id-<?php echo $id; ?> .page-id-<?php echo $id; ?> {
+			background-color: white!important;
+		}
+
+		.page-id-<?php echo $id; ?> .page-id-<?php echo $id; ?>:nth-child(1) a {
+			color: #173862!important;
+		}
+
+		.page-id-<?php echo $id; ?> .page-id-<?php echo $id; ?>:nth-child(2) a {
+			color: #757575!important;
+		}
+
+		.page-id-<?php echo $id; ?> .page-id-<?php echo $id; ?>:nth-child(3) a {
+			color: #1f7da5!important;
+		}
+
+		.page-id-<?php echo $id; ?> .page-id-<?php echo $id; ?>:nth-child(4) a {
+			color: #007660!important;
+		}
+
+	</style>
 </head>
 
 <body <?php body_class(); ?>>
