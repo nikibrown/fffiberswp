@@ -25,15 +25,29 @@
 				<div class="col-lg-12">
 					<ul>
 						<?php while ( have_posts() ) : the_post(); ?>
-							<li>
-								<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-							</li>
-						<?php endwhile; endif; ?>
+							<?php $post_type = get_post_type(); ?>
 
+							<?php if ( 'publications' == get_post_type() ) { ?>
+								<li>
+									<h2>
+										<?php if( get_field('publication_url') ) { ?>
+											<a href="<?php the_field("publication_url"); ?>" target="_blank">
+										<?php } else if( get_field('publication_file') ) { ?>
+											<a href="<?php the_field("publication_file"); ?>" target="_blank">
+										<?php } ?>
+											<?php echo ucfirst($post_type); ?>: <?php the_title(); ?> <i class="fas fa-external-link-alt fa-xs"></i>
+										</a>
+									</h2>
+								</li>
+							<?php } else { ?>
+								<li>
+									<h2><a href="<?php the_permalink(); ?>"><?php echo ucfirst($post_type); ?>: <?php the_title(); ?></a></h2>
+								</li>
+							<?php } ?>
+						<?php endwhile; endif; ?>
 					</ul>
-					
-			</div></div>
-			
+				</div>
+			</div>
 		</article>
 	</div>
 </main>
