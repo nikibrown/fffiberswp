@@ -60,7 +60,7 @@
 											
 									</div>
 
-									<p><em>Nat Immunol. 2021 Jan;22(1):2-6. </em></p>
+									<p><em><?php the_field("journal_name"); ?> </em></p>
 								</li>
 
 							<?php endwhile; endif; ?>
