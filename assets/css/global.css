@@ -7512,7 +7512,9 @@ main a {
     color: #fff; }
     @media (min-width: 992px) {
       .nav-item:hover span:after {
-        background-color: #efb656; } }
+        background-color: #efb656; }
+      .nav-item:hover .dropdown-menu span:after {
+        display: none; } }
 
 .dropdown-menu {
   display: block;
@@ -7526,6 +7528,8 @@ main a {
     .dropdown-menu {
       box-shadow: 7px 9px 15px -5px rgba(0, 0, 0, 0.73);
       display: none; } }
+  .dropdown-menu .nav-item {
+    margin-right: 0; }
   .dropdown-menu .dropdown-item {
     color: #1f7da5;
     font-family: "Gotham Book", sans-serif;

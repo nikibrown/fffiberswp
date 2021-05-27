@@ -91,84 +91,20 @@
                         Main Menu <span class="navbar-toggler-icon">&#9776;</span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link dropdown-toggle"
-                                    href="<?php echo esc_url(get_page_link(174)); ?>"
-                                    
-                                    
-                                    ><span>About</span>
-                                </a>
 
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(166)); ?>">FAQs</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(176)); ?>">Jobs</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(186)); ?>">Contact Us</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link dropdown-toggle"
-                                    href="<?php echo esc_url(get_page_link(135)); ?>"
-                                    
-                                    
-                                    ><span>Research</span>
-                                </a>
-
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(138)); ?>">Physiology</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(141)); ?>">Communities</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(143)); ?>">Behavior</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(145)); ?>">Modeling</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link dropdown-toggle"
-                                    href="<?php echo esc_url(get_page_link(153)); ?>"
-                                    
-                                    ><span>People</span>
-                                </a>
-
-                                <!--<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(153)); ?>">Current Members</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(156)); ?>">Past Members</a></li>
-                                </ul>-->
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link dropdown-toggle"
-                                    href="<?php echo esc_url(get_page_link(58)); ?>"
-                                   
-                                    ><span>Publications</span>
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a
-                                    class="nav-link dropdown-toggle"
-                                    href="<?php echo esc_url(get_page_link(123)); ?>"
-                                    
-                                    
-                                >
-                                    <span>Resources</span>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(104)); ?>">Genomes</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo esc_url(get_page_link(125)); ?>">Protocols</a></li>
-                                    <li>
-                                        <a class="dropdown-item" href="<?php echo esc_url(get_page_link(132)); ?>">Microfluidic Devices</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a
-                                    class="nav-link dropdown-toggle"
-                                    href="<?php echo esc_url(get_page_link(191)); ?>"
-                                    ><span>Multimedia Gallery</span>
-                                </a>
-                            </li>
-                        </ul>
+					
+					<?php
+						wp_nav_menu( array(
+						'menu'              => 'Main Nav',
+						'theme_location'    => 'header-menu',
+						'depth'             => 2,
+						'container'         => 'false',
+						'menu_class'        => 'navbar-nav',
+						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						'walker'            => new wp_bootstrap_navwalker())
+						);
+					?>
+						
                     </div>
                 </nav>
             </div>

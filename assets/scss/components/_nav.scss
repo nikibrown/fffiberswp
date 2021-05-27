@@ -69,6 +69,8 @@
                 .show & {
                     background-color: $brand-gold;
                 }
+
+				
             }
         }
     }
@@ -82,6 +84,12 @@
                     background-color: $brand-gold;
                 }
             }
+
+			.dropdown-menu span {
+				&:after {
+					display: none;
+				}
+			}
         }
     }
 }
@@ -99,6 +107,10 @@
     //padding: 0 0 0.625rem 0;
     padding: 0;
     top: 100%;
+	
+	.nav-item {
+		margin-right: 0;
+	}
 
     .dropdown-item {
         color: #1f7da5;
