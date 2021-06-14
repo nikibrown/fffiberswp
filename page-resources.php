@@ -18,7 +18,6 @@
 	<?php get_header();?>
 <main>
     <div class="container">
-		<!-- TODO: make subnavs works -->
 		<?php get_template_part( 'template-parts/secondary-nav'); ?>
 		<article>
 			<div class="row">

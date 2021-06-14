@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Publications 
+ * Template Name: Publications 2018
  *
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -106,7 +106,7 @@
 							'post_type' => 'publications',
 							'numberposts' => -1,
 							'meta_key' => 'year', 
-							'meta_value' => '2021' ,
+							'meta_value' => '2018' ,
 						);
 
 						// The Query
