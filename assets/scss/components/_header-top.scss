@@ -1,0 +1,282 @@
+.header-top {
+    background-color: $white;
+    color: #58595b;
+    padding: $base-spacing-unit 0;
+    border-bottom: 2px solid $brand-red;
+
+    @include media-breakpoint-up(lg) {
+        padding: 30px 0;
+    }
+
+    a {
+        color: $brand-dark-gray;
+        text-decoration: none;
+        &:hover {
+            color: darken($brand-dark-gray, 10%);
+            text-decoration: none;
+        }
+    }
+}
+
+.header-bottom {
+    background: $brand-light-gray;
+}
+
+.sub-nav {
+    display: none;
+    @include media-breakpoint-up(lg) {
+        display: block;
+        text-align: right;
+    }
+
+    li {
+        font-size: 11px;
+        text-transform: uppercase;
+        .fas {
+            font-size: 17px;
+            padding-left: 5px;
+        }
+    }
+
+    .list-inline {
+        margin-bottom: 30px;
+    }
+
+    .list-inline-item {
+        display: block;
+        @include media-breakpoint-up(lg) {
+            display: inline-block;
+            &:not(:last-child) {
+                margin-right: 50px;
+            }
+        }
+    }
+}
+
+.form-inline {
+    // changes layout from desktop to mobile (row vs stacked)
+    flex-flow: column wrap;
+    @include media-breakpoint-up(lg) {
+        flex-flow: row wrap;
+    }
+
+    .form-control {
+        &.header-top-search {
+            height: 0;
+            outline-offset: 0;
+            outline: 0;
+            margin-bottom: 10px;
+            width: 60vw;
+            visibility: hidden;
+            @include media-breakpoint-up(lg) {
+                height: auto;
+                margin-bottom: 0;
+                width: 300px;
+            }
+            &.show {
+                height: auto;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.search-label {
+    &:hover {
+        color: darken(#58595b, 10%);
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.tagline {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    @include media-breakpoint-up(lg) {
+        text-align: right;
+    }
+}
+
+.brand-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 270px;
+    @include media-breakpoint-up(lg) {
+        margin: 0;
+    }
+}
+
+nav.navbar {
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: 700;
+
+    li {
+        margin-right: 25px;
+        @include media-breakpoint-up(xl) {
+            margin-right: 45px;
+        }
+        &:last-child {
+            margin-bottom: 30px;
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .nav-link {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    a {
+        color: $brand-blue;
+        font-size: 16px;
+        font-weight: 700;
+        &:before {
+            color: $brand-med-gray;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            content: '\f054';
+            font-family: 'Font Awesome 5 Free';
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 900;
+            text-rendering: auto;
+            line-height: 1;
+            margin-right: 0.626rem;
+        }
+
+        &:hover {
+            color: darken($brand-blue, 10%);
+        }
+    }
+    ul.navbar-nav li:first-child a.nav-link {
+        padding-left: 0;
+    }
+
+    // dropdown menu styling
+    .dropdown-menu {
+        background-color: $brand-light-gray;
+        border: none;
+        border-radius: 0;
+        display: block;
+        left: 25px;
+        margin-left: 20px;
+        padding: 0;
+        top: 48px;
+
+        @include media-breakpoint-up(lg) {
+            background-color: $brand-dark-blue;
+            display: none;
+            margin-left: 0;
+        }
+
+        &.show {
+            display: block;
+        }
+        li {
+            margin-right: 0 !important;
+            margin-bottom: 0;
+            // remove border-top from first link in dropdown menu
+            &:first-child {
+                a {
+                    .navbar & {
+                        border-top: none;
+                    }
+                }
+            }
+
+            a {
+                color: $brand-blue;
+                font-weight: 500;
+                @include media-breakpoint-up(lg) {
+                    color: $brand-white;
+                    border-top: 1px solid rgba(255, 255, 255, 0.3);
+                    color: $white;
+                    padding: 8px 15px;
+
+                    &:hover {
+                        color: darken($white, 20%);
+                    }
+                }
+
+                &:hover {
+                    background: transparent;
+                }
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// hide down arrow for dropdown
+.dropdown-toggle {
+    &:after {
+        display: none;
+    }
+}
+
+.navbar-toggler {
+    color: $brand-blue;
+    border: none !important;
+    border-color: transparent;
+    outline: none;
+    margin: 10px;
+    width: 100%;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    @include media-breakpoint-down(lg) {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    &:focus {
+        border: none !important;
+        border-color: transparent;
+        outline: none;
+    }
+
+    span {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-right: 18px;
+        text-transform: uppercase;
+    }
+
+    .fas {
+        font-size: 1.7em;
+    }
+}
+
+/* Page headers */
+
+.page-header-img {
+    background-position: center top;
+    background-size: cover;
+
+    .row {
+        min-height: 250px;
+        @include media-breakpoint-up(lg) {
+            min-height: 400px;
+        }
+    }
+
+    h1 {
+        color: $brand-white;
+        line-height: 1;
+        margin-bottom: 45px;
+    }
+}

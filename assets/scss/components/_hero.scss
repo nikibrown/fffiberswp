@@ -1,0 +1,36 @@
+.hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: $brand-white;
+    position: relative;
+    &:before {
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.5228466386554622) 50%,
+            rgba(0, 0, 0, 0.500437675070028) 100%
+        );
+        bottom: 0;
+        content: '';
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .row {
+        min-height: 210px;
+        z-index: 2;
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
+            min-height: 410px;
+        }
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+}

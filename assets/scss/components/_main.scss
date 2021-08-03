@@ -1,50 +1,11 @@
 main {
-    a {
-        color: $brand-blue;
-        &:hover {
-            color: darken($brand-blue, 15%);
-            text-decoration: none;
-        }
-    }
 
     aside {
+        
     }
 
     article {
+        
     }
 }
 
-.page-template-page-resources {
-	h3 {
-		color: $brand-navy;
-		text-transform: uppercase;
-	}
-}
-
-
-
-.faqs {
-	h3 {
-		color: $brand-blue;
-		&:hover {
-			cursor: pointer;
-			text-decoration: none;
-		}
-		&[aria-expanded='true'] {
-			.fa-caret-right {
-				transform: rotate(90deg);
-			}
-		}
-	}
-    
-}
-
-.jobs {
-	li {
-		border-bottom: 1px solid $brand-med-gray;
-		margin-bottom: 1rem;
-		&:last-child {
-			border-bottom: none;
-		}
-	}
-}

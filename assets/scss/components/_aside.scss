@@ -1,0 +1,47 @@
+aside.sidebar-nav {
+    display: none;
+    @include media-breakpoint-up(lg) {
+        display: block;
+    }
+    ul {
+        li {
+            border-bottom: 1px dashed $brand-light-gray2;
+            &:last-child {
+                border-bottom: none;
+            }
+            a {
+                color: $brand-blue;
+                text-decoration: none;
+                display: block;
+                font-weight: 700;
+                padding: 10px 0;
+                &:hover {
+                    color: $brand-red;
+                }
+            }
+            &.has-sub-menu {
+                a {
+                    color: $brand-red;
+                    &:hover {
+                        color: $brand-red;
+                    }
+                }
+            }
+
+            ul.sub-menu {
+                margin-bottom: 10px;
+                li {
+                    border-bottom: none;
+                    padding-left: 14px;
+                    a {
+                        border-bottom: none;
+                        color: $brand-dark-gray;
+                        font-weight: 500;
+                        font-size: 14px;
+                        padding: 7px 0;
+                    }
+                }
+            }
+        }
+    }
+}

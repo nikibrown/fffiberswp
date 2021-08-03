@@ -1,34 +1,86 @@
-.slider {
-    background-color: $brand-light-gray;
-    padding: 3.125rem 0;
+.home-slider {
+    position: relative;
+    height: 400px;
+    @include media-breakpoint-up(lg) {
+        height: 610px;
+    }
+
+    h1 {
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 1.2;
+        @include media-breakpoint-up(lg) {
+            font-size: 44px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        @include media-breakpoint-up(lg) {
+            font-size: 16px;
+        }
+    }
+
+    .slide {
+        align-items: center;
+        background-size: cover;
+        background-position: top center;
+        color: $brand-white;
+        display: flex;
+        // min-height: 400px;
+
+        &:focus {
+            outline: none;
+        }
+
+        .row {
+            height: 400px;
+            @include media-breakpoint-up(lg) {
+                height: 610px;
+            }
+        }
+    }
+
+    .slick-dots {
+        // extend container to constrain slick dots
+        @extend .container;
+        bottom: 30px;
+        left: 50%;
+        position: absolute;
+        text-align: left;
+        transform: translateX(-50%);
+
+        li {
+            margin: 0;
+            button {
+                &:before {
+                    font-size: 11px;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: $brand-white;
+                    opacity: 1;
+                }
+                &:hover {
+                    &:before {
+                        color: $brand-white;
+                        -webkit-text-fill-color: $brand-white;
+                    }
+                }
+            }
+
+            &.slick-active {
+                button {
+                    &:before {
+                        color: $brand-white;
+                        -webkit-text-fill-color: $brand-white;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.logo-slider {
+// Override Slick theme.css
+.slick-dotted.slick-slider {
     margin-bottom: 0;
-
-    img {
-        display: block;
-        margin: 0 auto;
-    }
-}
-
-.slick-arrow {
-    border: none;
-    color: $brand-navy;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.slick-prev {
-    left: 0px;
-    @include media-breakpoint-up(md) {
-        left: -20px;
-    }
-}
-.slick-next {
-    right: 0px;
-    @include media-breakpoint-up(md) {
-        right: -20px;
-    }
 }

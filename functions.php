@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package prime
+ * @package fffibers
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -70,6 +70,7 @@ if ( ! function_exists( 'prime_setup' ) ) :
 				'script',
 			)
 		);
+
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support(
@@ -141,16 +142,17 @@ wp_deregister_script( 'jquery' );
 /**
  * Enqueue scripts and styles.
  */
-function prime_scripts() {
+function fffibers_scripts() {
 
 	wp_enqueue_style( 'global', get_template_directory_uri() . '/assets/css/global.css', array(), '1.1', 'all');
 	wp_enqueue_style( 'slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '1.1', 'all');
+	wp_enqueue_style( 'slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', array(), '1.1', 'all');
 	wp_enqueue_script( 'jquery351', '//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), '3.5.1', true );
 	wp_enqueue_script( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array ( 'jquery' ), 1.1, true);
 	wp_enqueue_script( 'slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array ( 'jquery' ), 1.1, true);
 	wp_enqueue_script( 'fontawesome', '//kit.fontawesome.com/b2594f8c09.js', array (), 1.1, true);
 }
-add_action( 'wp_enqueue_scripts', 'prime_scripts' );
+add_action( 'wp_enqueue_scripts', 'fffibers_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -210,7 +212,7 @@ if( function_exists('acf_add_options_page') ) {
  */
 function wpdocs_remove_menus(){
    
-	remove_menu_page( 'edit.php' ); //Posts
+	//remove_menu_page( 'edit.php' ); //Posts
 	remove_menu_page( 'edit-comments.php' ); //Comments
 }
 add_action( 'admin_menu', 'wpdocs_remove_menus' );

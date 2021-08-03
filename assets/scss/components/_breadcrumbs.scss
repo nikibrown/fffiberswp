@@ -1,7 +1,30 @@
-.breadcrumb {
+.breadcrumb-container {
+    display: none;
+    padding: 10px 0;
+    @include media-breakpoint-up(lg) {
+        display: block;
+    }
+}
 
+.breadcrumb {
+    color: $brand-light-gray2;
+    font-size: 14px;
+    line-height: 24px;
 }
 
 .breadcrumb-item {
-
+    color: $brand-light-gray2;
+    + .breadcrumb-item:before {
+        color: $brand-light-gray2;
+    }
+    &.active {
+        color: $brand-light-gray2;
+    }
+    a {
+        color: $brand-light-gray2;
+        text-decoration: none;
+        &:hover {
+            color: darken($brand-light-gray2, 10%);
+        }
+    }
 }

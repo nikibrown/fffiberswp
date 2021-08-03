@@ -1,0 +1,17 @@
+article {
+    position: relative;
+    padding-top: 20px;
+    @include media-breakpoint-up(lg) {
+        padding-top: 0;
+        &:before {
+            background-image: url('../img/logo-bg.svg');
+            content: '';
+            width: 485px;
+            height: 628px;
+            z-index: -1;
+            position: absolute;
+            bottom: 100px;
+            left: -400px;
+        }
+    }
+}
