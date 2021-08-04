@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Production Facility 
+ * Template Name: Individual Product 
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Fffibers
+ * @package prime
  */
 
  ?>
@@ -85,11 +85,14 @@
 						<?php endif; ?>
 
 					</div>
-
 				</article>
 			</div>
 		</div>
 	</main>
+
+	<?php if( get_field('cta_banner_headline') ): ?>
+		<?php get_template_part( 'template-parts/banner'); ?>
+	<?php endif; ?>
 
 <?php endwhile; endif; ?>
 	

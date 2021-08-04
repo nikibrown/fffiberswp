@@ -1,0 +1,41 @@
+.product {
+	margin-bottom: 20px;
+	h2 {
+		color: $brand-white;
+	}
+
+	p {
+		color: $brand-white;
+	}
+}
+
+.section-blue {
+	background-color: $brand-blue;
+}
+
+.section-red {
+	background-color: $brand-red;
+}
+
+.section-yellow {
+	background-color: $brand-yellow;
+}
+
+.row {
+	&.row-min-height {
+		min-height: 340px;
+	}
+}
+
+.product-img {
+	background-size: cover;
+    background-position: top center;
+    min-height: 340px;
+}
+
+.text-content {
+	display: flex;
+	align-items: center;
+	min-height: 340px;
+	padding-left: 40px
+}

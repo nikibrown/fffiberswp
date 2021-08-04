@@ -7717,3 +7717,33 @@ article {
   margin-bottom: 20px !important; }
   .card-gallery:hover {
     cursor: pointer; }
+
+.product {
+  margin-bottom: 20px; }
+  .product h2 {
+    color: #fff; }
+  .product p {
+    color: #fff; }
+
+.section-blue {
+  background-color: #0914c3; }
+
+.section-red {
+  background-color: #cc3256; }
+
+.section-yellow {
+  background-color: #fcb310; }
+
+.row.row-min-height {
+  min-height: 340px; }
+
+.product-img {
+  background-size: cover;
+  background-position: top center;
+  min-height: 340px; }
+
+.text-content {
+  display: flex;
+  align-items: center;
+  min-height: 340px;
+  padding-left: 40px; }
