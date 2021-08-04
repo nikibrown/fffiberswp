@@ -3,16 +3,23 @@ article {
     padding: 20px 0 50px 0;
     @include media-breakpoint-up(lg) {
         padding: 0 0 150px 0;
-        &:before {
-            background-image: url('../img/logo-bg.svg');
-            content: '';
-            width: 485px;
-            height: 628px;
-            z-index: -1;
-            position: absolute;
-            top: 250px;
-            left: -400px;
-        }
+		&:before {
+			background-image: url('../img/logo-bg.svg');
+			content: '';
+			width: 485px;
+			height: 628px;
+			z-index: -1;
+			position: absolute;
+			top: 250px;
+			left: -400px;
+		}
+
+		// no logo background on news articles located on homepage
+		.home & {
+			&:before {
+				display: none;
+			}
+		}
     }
 
 	figure {

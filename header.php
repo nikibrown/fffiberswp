@@ -29,8 +29,6 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-
-
 <header>
 	<div class="header-top">
 		<div class="container">

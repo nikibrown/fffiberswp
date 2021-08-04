@@ -7470,7 +7470,13 @@ nav.navbar {
 
 footer {
   background-color: #231f20;
-  color: #fff; }
+  color: #d0d2d3; }
+  footer p {
+    font-size: 14px; }
+  footer a {
+    color: #d0d2d3; }
+    footer a:hover {
+      color: #b6b9ba; }
   footer .social-nav a {
     color: #414042; }
     footer .social-nav a:hover {
@@ -7635,7 +7641,9 @@ article {
         z-index: -1;
         position: absolute;
         top: 250px;
-        left: -400px; } }
+        left: -400px; }
+      .home article:before {
+        display: none; } }
   article figure .figure-caption {
     font-style: normal;
     font-size: 14px;

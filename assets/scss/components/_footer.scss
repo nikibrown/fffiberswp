@@ -1,6 +1,17 @@
 footer {
     background-color: #231f20;
-    color: #fff;
+    color: #d0d2d3;
+	
+	p {
+		font-size: 14px;
+	}
+
+	a {
+		color: #d0d2d3;
+		&:hover {
+			color: darken(#d0d2d3, 10%);
+		}
+	}
 
     .social-nav {
         a {
