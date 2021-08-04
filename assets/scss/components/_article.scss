@@ -1,8 +1,8 @@
 article {
     position: relative;
-    padding-top: 20px;
+    padding: 20px 0 50px 0;
     @include media-breakpoint-up(lg) {
-        padding-top: 0;
+        padding: 0 0 150px 0;
         &:before {
             background-image: url('../img/logo-bg.svg');
             content: '';
@@ -10,8 +10,30 @@ article {
             height: 628px;
             z-index: -1;
             position: absolute;
-            bottom: 100px;
+            top: 250px;
             left: -400px;
         }
     }
+
+	figure {
+		.figure-caption {
+			font-style: normal;
+			font-size: 14px;
+			font-weight: 700;
+		}
+	}
+
+	.headshot {
+		display: block;
+		margin: 0 auto 20px auto;
+		img {
+			display: block;
+			margin: 0 auto 20px auto;
+		}
+		@include media-breakpoint-up(sm) {
+			display: inline-block;
+			float: right;
+			margin: 0 0 20px 20px;
+		}
+	}
 }

@@ -7,9 +7,11 @@
 }
 
 .breadcrumb {
+	background: $brand-white;
     color: $brand-light-gray2;
     font-size: 14px;
     line-height: 24px;
+	padding-left: 0;
 }
 
 .breadcrumb-item {
