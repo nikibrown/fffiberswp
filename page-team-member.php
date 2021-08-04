@@ -28,19 +28,7 @@
 	</div>
 </section>
 
-<nav aria-label="breadcrumb" class="breadcrumb-container">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="#">Home</a></li>
-					<li class="breadcrumb-item"><a href="#">About Us</a></li>
-					<li class="breadcrumb-item active" aria-current="page">General Subpage</li>
-				</ol>
-			</div>
-		</div>
-	</div>
-</nav>
+<?php get_template_part( 'template-parts/breadcrumbs'); ?>
 
 <main class="secondary-page">
 	<div class="container">

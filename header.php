@@ -66,7 +66,18 @@
 					Main Menu <span class="navbar-toggler-icon">☰</span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
-					<ul id="menu-main-nav" class="navbar-nav" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+					<?php
+						wp_nav_menu( array(
+						'menu'              => 'Main Nav',
+						'theme_location'    => 'header-menu',
+						'depth'             => 2,
+						'container'         => 'false',
+						'menu_class'        => 'navbar-nav',
+						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						'walker'            => new wp_bootstrap_navwalker())
+						);
+					?>
+					<!-- <ul id="menu-main-nav" class="navbar-nav" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
 						<li id="menu-item-557"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-557 nav-item">
 							<a href="#" aria-haspopup="true" aria-expanded="false"
@@ -167,7 +178,7 @@
 							</ul>
 						</li>
 						
-					</ul>
+					</ul> -->
 				</div>
 			</nav>
 		</div>

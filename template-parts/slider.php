@@ -14,7 +14,7 @@
 		<div class="slide" style="background-image: url('<?php echo $slide_background_image; ?>');">
 			<div class="container">
 				<div class="row align-items-center">
-					<div class="col-lg-5">
+					<div class="col-lg-6">
 						<h1>
 							<?php echo $slide_headline; ?>
 						</h1>
@@ -27,7 +27,7 @@
 								aria-hidden="true"></i>
 						</a>
 					</div>
-					<div class="col-lg-7"></div>
+					<div class="col-lg-6"></div>
 				</div>
 			</div>
 		</div>

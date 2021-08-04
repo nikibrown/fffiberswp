@@ -25,3 +25,9 @@
 		font-weight: 500;
 	}
 }
+.card-gallery {
+	margin-bottom: 20px!important;
+	&:hover {
+		cursor: pointer;
+	}
+}
