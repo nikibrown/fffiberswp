@@ -50,6 +50,10 @@
 		</div>
 	</main>
 
+	<?php if( get_field('cta_banner_headline') ): ?>
+		<?php get_template_part( 'template-parts/banner'); ?>
+	<?php endif; ?>
+
 <?php endwhile; endif; ?>
 	
 <?php get_footer(); ?>

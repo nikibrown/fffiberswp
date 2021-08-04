@@ -127,6 +127,13 @@ nav.navbar {
                 margin-bottom: 0;
             }
         }
+
+		&.current_page_ancestor > a {
+			color: $brand-red;
+			&:before {
+            	color: $brand-red;
+			}
+		}
     }
 
     .nav-link {
@@ -138,6 +145,7 @@ nav.navbar {
         color: $brand-blue;
         font-size: 16px;
         font-weight: 700;
+
         &:before {
             color: $brand-med-gray;
             -webkit-font-smoothing: antialiased;
@@ -155,6 +163,8 @@ nav.navbar {
         &:hover {
             color: darken($brand-blue, 10%);
         }
+
+		
     }
     ul.navbar-nav li:first-child a.nav-link {
         padding-left: 0;

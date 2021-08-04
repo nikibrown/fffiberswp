@@ -7364,6 +7364,10 @@ nav.navbar {
       @media (min-width: 992px) {
         nav.navbar li:last-child {
           margin-bottom: 0; } }
+    nav.navbar li.current_page_ancestor > a {
+      color: #cc3256; }
+      nav.navbar li.current_page_ancestor > a:before {
+        color: #cc3256; }
   nav.navbar .nav-link {
     padding-top: 12px;
     padding-bottom: 12px; }
