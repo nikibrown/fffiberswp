@@ -42,14 +42,10 @@
 				<div class="col-lg-8 sub-nav">
 					<ul class="list-inline">
 						<li class="list-inline-item">
-							<!-- <form class="header-search-form form-inline  my-lg-0">
-								<input class="header-top-search form-control mr-sm-2" type="Search" placeholder="Search"
-									aria-label="Search"> -->
-								<span id="search-label" class="search-label d-inline-block">Search <i
-										class="fas fa-search"></i></span>
-							<!-- </form> -->
-						</li>
-						<li class="list-inline-item"><a href="">Contact <i class="fas fa-at"></i></a></li>
+                             <a href="" data-toggle="modal" data-target="#searchmodal">Search <i class="fas fa-search fa-lg"></i></a>
+                        </li>
+						<?php get_search_form(); ?>
+						<li class="list-inline-item"><a href="<?php echo esc_url( get_page_link(54) ); ?>">Contact <i class="fas fa-at"></i></a></li>
 					</ul>
 
 					<p class="tagline">High Performance Materials</p>

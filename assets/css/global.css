@@ -7255,10 +7255,10 @@ p {
     .lead {
       font-size: 30px; } }
 
-article a {
+main a {
   color: #0914c3;
   text-decoration: none; }
-  article a:hover {
+  main a:hover {
     color: #cc3256; }
 
 .figure-caption {

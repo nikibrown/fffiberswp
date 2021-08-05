@@ -14,7 +14,7 @@
 				<div class="col-lg-8">
 					<input class="form-control form-control-lg" type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
 				</div>
-				<div class="col-lg-4"><input class="btn btn-primary-outline btn-block" type="submit" value="search" /></div>
+				<div class="col-lg-4"><input class="btn btn-primary btn-block" type="submit" value="search" /></div>
 			</div>
 		</form>
       </div>
