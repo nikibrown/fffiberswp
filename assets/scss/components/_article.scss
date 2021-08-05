@@ -15,7 +15,8 @@ article {
 		}
 
 		// no logo background on news articles located on homepage
-		.home & {
+		.home &,
+		.blog & {
 			&:before {
 				display: none;
 			}

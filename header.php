@@ -34,7 +34,7 @@
 		<div class="container">
 			<div class="row align-items-end">
 				<div class="col-lg-4">
-					<a href="/">
+					<a href="<?php bloginfo('url'); ?>">
 						<img src="<?php bloginfo('template_url'); ?>/assets/img/fff-logo.svg" alt="" class="brand-logo">
 					</a>
 				</div>
