@@ -31,6 +31,7 @@
 		</div>
 	</section>
 
+	<?php get_template_part( 'template-parts/breadcrumbs'); ?>
 
 	<main class="secondary-page">
 		<div class="container">
@@ -42,17 +43,27 @@
 							<div class="col-lg-4">
 								<article>
 									<a href="<?php the_permalink(); ?>">
-										<?php the_post_thumbnail();?>
+										<?php the_post_thumbnail('medium', ['class' => 'img-fluid my-4']); ?>
 									</a>
 									<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 									<p class="date"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
-									
+									<p><?php the_excerpt(); ?></p>
 								</article>
 							</div>
-						<?php endwhile; endif; ?>
+						<?php endwhile; ?>
+						
+						
+						<?php endif; ?>
 					</div>
-						
-						
+
+					<div class="row">
+						<div class="col-lg-12 mb-3">
+							<p>
+								<span class="float-right"><?php next_posts_link(); ?></span>
+								<span class="float-left"><?php previous_posts_link(); ?></span>
+							</p>
+						</div>
+					</div>
 				</section>
 			</div>
 		</div>

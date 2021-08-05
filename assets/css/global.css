@@ -7248,9 +7248,12 @@ p {
 
 .lead {
   color: #18266d;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 300;
-  line-height: 34px; }
+  line-height: 1.2; }
+  @media (min-width: 992px) {
+    .lead {
+      font-size: 30px; } }
 
 article a {
   color: #0914c3;
@@ -7646,9 +7649,12 @@ article {
         position: absolute;
         top: 250px;
         left: -400px; }
-      .home article:before,
-      .blog article:before {
-        display: none; } }
+      .home article,
+      .blog article {
+        padding: 0 0 20px 0; }
+        .home article:before,
+        .blog article:before {
+          display: none; } }
   article figure .figure-caption {
     font-style: normal;
     font-size: 14px;
