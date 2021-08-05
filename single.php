@@ -38,15 +38,14 @@
 		<div class="container">
 			<div class="row">
 				
-				<article class="offset-lg-1 col-lg-8">
-					<p class="lead"><?php the_field("intro_text"); ?></p>
-					<?php the_content(); ?>
+				<article class="col-lg-12">
+					<?php the_post_thumbnail('medium', ['class' => 'post-thumb img-fluid']); ?>
+					<p class="date"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
+					<?php the_content(); ?>					
 				</article>
 			</div>
 		</div>
 	</main>
-
-
 
 <?php endwhile; endif; ?>
 	

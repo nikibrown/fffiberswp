@@ -7693,6 +7693,13 @@ article {
   font-size: 13px;
   text-transform: uppercase; }
 
+.single .post-thumb {
+  margin: 20px 0; }
+  @media (min-width: 992px) {
+    .single .post-thumb {
+      float: right;
+      margin: 0 0 20px 20px; } }
+
 .card-bio {
   border-radius: 0;
   border: 1px solid #bbbdbf;
