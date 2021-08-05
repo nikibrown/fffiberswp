@@ -11,26 +11,44 @@
 
 <?php get_header();?>
 
-<main>
-    <div class="container">
-		<article>
-			<div class="row">
-				<div class="col-lg-12">
-					<h2><?php esc_html_e( 'It looks like nothing was found at this location', 'prime' ); ?></h2>
-					<p>Try navigating to the page again or try searching. </p>
 
-					<form action="/" method="get">
-					<div class="row">
-						<div class="col-lg-8">
-							<input class="form-control form-control-lg" type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
-						</div>
-						<div class="col-lg-4"><input class="btn btn-primary-outline btn-block" type="submit" value="search" /></div>
-					</div>
-				</form>
+
+
+
+
+
+
+	<?php get_header();?>
+
+	<?php if( get_field('field_name') ) { ?>
+	<section class="hero section-md" style="background-image: url('<?php the_field("header_image"); ?>');">
+	<? } else { ?>
+	<section class="hero section-md" style="background-image: url('<?php the_field("default_sub_page_header_image", "option"); ?>');">
+	<? } ?>
+		<div class="container">
+			<div class="row align-items-end">
+				<div class="col-lg-12">
+					<h1>Error 404</h1>
 				</div>
 			</div>
-		</article>
-	</div>
-</main>
-		
+		</div>
+	</section>
+
+	<?php get_template_part( 'template-parts/breadcrumbs'); ?>
+
+	<main class="secondary-page">
+		<div class="container">
+			<div class="row">
+				
+				<article class="col-lg-12">
+					<p class="lead"><?php esc_html_e( 'It looks like nothing was found at this location', 'prime' ); ?></p>
+					<p>Try navigating to the page again or try searching. </p>
+				</article>
+			</div>
+		</div>
+	</main>
+
+
+
+	
 <?php get_footer(); ?>
