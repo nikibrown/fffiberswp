@@ -7490,7 +7490,7 @@ footer {
       color: #747276; }
 
 .sidebar-nav ul li {
-  border-bottom: 1px dashed #bbbdbf;
+  border-bottom: 1px dashed #929497;
   margin-bottom: 0; }
   .sidebar-nav ul li:last-child {
     border-bottom: none; }
@@ -7609,22 +7609,22 @@ footer {
 
 .breadcrumb {
   background: #fff;
-  color: #bbbdbf;
+  color: #929497;
   font-size: 14px;
   line-height: 24px;
   padding-left: 0; }
 
 .breadcrumb-item {
-  color: #bbbdbf; }
+  color: #929497; }
   .breadcrumb-item + .breadcrumb-item:before {
-    color: #bbbdbf; }
+    color: #929497; }
   .breadcrumb-item.active {
-    color: #bbbdbf; }
+    color: #929497; }
   .breadcrumb-item a {
-    color: #bbbdbf;
+    color: #929497;
     text-decoration: none; }
     .breadcrumb-item a:hover {
-      color: #a1a4a6; }
+      color: #787a7e; }
 
 article {
   position: relative;
@@ -7712,7 +7712,7 @@ article {
 
 .card-bio {
   border-radius: 0;
-  border: 1px solid #bbbdbf;
+  border: 1px solid #929497;
   margin-bottom: 20px !important;
   text-align: center; }
   @media (min-width: 576px) {
