@@ -22,7 +22,7 @@
 						<?php the_field("contact_info", "option"); ?>
 					</div>
 					<div class="col-lg-3">
-						<ul class="list-inline social-nav">
+						<ul class="list-inline social-nav text-lg-right">
 							<?php if( get_field('facebook_url', 'option') ): ?>
 								<li class="list-inline-item"><a href="<?php the_field('facebook_url', 'option'); ?>" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a></li>
 							<?php endif; ?>
