@@ -24,7 +24,6 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 	<?php wp_head(); ?>
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"> -->
 </head>
 
 <body <?php body_class(); ?>>
