@@ -1,11 +1,8 @@
-aside.sidebar-nav {
-    display: none;
-    @include media-breakpoint-up(lg) {
-        display: block;
-    }
+.sidebar-nav {
     ul {
         li {
             border-bottom: 1px dashed $brand-light-gray2;
+			margin-bottom: 0;
             &:last-child {
                 border-bottom: none;
             }

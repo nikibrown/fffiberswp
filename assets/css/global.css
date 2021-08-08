@@ -7489,38 +7489,34 @@ footer {
     footer .social-nav a:hover {
       color: #747276; }
 
-aside.sidebar-nav {
-  display: none; }
-  @media (min-width: 992px) {
-    aside.sidebar-nav {
-      display: block; } }
-  aside.sidebar-nav ul li {
-    border-bottom: 1px dashed #bbbdbf; }
-    aside.sidebar-nav ul li:last-child {
-      border-bottom: none; }
-    aside.sidebar-nav ul li a {
-      color: #0914c3;
-      text-decoration: none;
-      display: block;
-      font-weight: 700;
-      padding: 10px 0; }
-      aside.sidebar-nav ul li a:hover {
-        color: #cc3256; }
-    aside.sidebar-nav ul li.has-sub-menu a {
+.sidebar-nav ul li {
+  border-bottom: 1px dashed #bbbdbf;
+  margin-bottom: 0; }
+  .sidebar-nav ul li:last-child {
+    border-bottom: none; }
+  .sidebar-nav ul li a {
+    color: #0914c3;
+    text-decoration: none;
+    display: block;
+    font-weight: 700;
+    padding: 10px 0; }
+    .sidebar-nav ul li a:hover {
       color: #cc3256; }
-      aside.sidebar-nav ul li.has-sub-menu a:hover {
-        color: #cc3256; }
-    aside.sidebar-nav ul li ul.sub-menu {
-      margin-bottom: 10px; }
-      aside.sidebar-nav ul li ul.sub-menu li {
+  .sidebar-nav ul li.has-sub-menu a {
+    color: #cc3256; }
+    .sidebar-nav ul li.has-sub-menu a:hover {
+      color: #cc3256; }
+  .sidebar-nav ul li ul.sub-menu {
+    margin-bottom: 10px; }
+    .sidebar-nav ul li ul.sub-menu li {
+      border-bottom: none;
+      padding-left: 14px; }
+      .sidebar-nav ul li ul.sub-menu li a {
         border-bottom: none;
-        padding-left: 14px; }
-        aside.sidebar-nav ul li ul.sub-menu li a {
-          border-bottom: none;
-          color: #58595b;
-          font-weight: 500;
-          font-size: 14px;
-          padding: 7px 0; }
+        color: #58595b;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 7px 0; }
 
 .home-slider {
   position: relative;
@@ -7609,11 +7605,7 @@ aside.sidebar-nav {
     color: #fff; }
 
 .breadcrumb-container {
-  display: none;
   padding: 10px 0; }
-  @media (min-width: 992px) {
-    .breadcrumb-container {
-      display: block; } }
 
 .breadcrumb {
   background: #fff;
@@ -7693,6 +7685,18 @@ article {
     color: #0914c3; }
     .btn.btn-secondary:hover {
       background-color: #f2f2f2; }
+
+.news h2 {
+  margin-bottom: 30px; }
+
+.news .btn {
+  margin: 40px 0; }
+  @media (min-width: 992px) {
+    .news .btn {
+      margin: 80px 0; } }
+
+.news img {
+  margin-bottom: 20px; }
 
 .date {
   font-weight: 300px;

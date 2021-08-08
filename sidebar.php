@@ -31,7 +31,7 @@
 			
 			?>
 			<li class="<?php echo $titlelowercase . ' page-id-' . $id ?>">
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class> <i class="fas fa-arrow-down"></i> <span><?php the_title(); ?></span> </a>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class><span><?php the_title(); ?></span> </a>
 			</li>
 
     <?php endwhile; ?>

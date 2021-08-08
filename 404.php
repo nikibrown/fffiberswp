@@ -11,13 +11,6 @@
 
 <?php get_header();?>
 
-
-
-
-
-
-
-
 	<?php get_header();?>
 
 	<?php if( get_field('field_name') ) { ?>

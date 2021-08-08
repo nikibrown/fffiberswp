@@ -1,9 +1,5 @@
 .breadcrumb-container {
-    display: none;
     padding: 10px 0;
-    @include media-breakpoint-up(lg) {
-        display: block;
-    }
 }
 
 .breadcrumb {

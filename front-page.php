@@ -26,7 +26,7 @@
 	</section>
 
 	<main>
-		<section class="news section-lg">
+		<section class="news section-sm">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
