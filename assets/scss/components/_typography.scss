@@ -68,3 +68,69 @@ main {
     font-weight: 300;
     font-style: italic;
 }
+
+
+
+/* TinyMCE styles */
+
+body#tinymce.wp-editor { 
+	color: $brand-dark-gray;
+	font-family: $worksans;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+	padding: 30px!important;
+
+	a {
+        color: $brand-blue;
+        text-decoration: none;
+        &:hover {
+            color: $brand-red;
+        }
+    }
+
+	h1 {
+		font-size: 40px;
+		line-height: 1.25;
+		font-weight: 400;
+		@include media-breakpoint-up(lg) {
+			font-size: 60px;
+		}
+	}
+
+
+	h2 {
+		color: $brand-dark-blue;
+		font-size: 22px;
+		line-height: 24px;
+		font-weight: 700;
+	}
+
+	h3 {
+		color: $brand-dark-gray;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 24px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.lead {
+		color: $brand-dark-blue;
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 1.2;
+		
+
+		@include media-breakpoint-up(lg) {
+			font-size: 30px;
+
+		}
+	}
+}
+
+ 
+

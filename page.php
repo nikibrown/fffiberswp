@@ -18,10 +18,10 @@
 
 	<?php get_header();?>
 
-	<?php if( get_field('field_name') ) { ?>
-	<section class="hero section-md" style="background-image: url('<?php the_field("header_image"); ?>');">
+	<?php if( get_field('header_image') ) { ?>
+		<section class="hero section-md" style="background-image: url('<?php the_field("header_image"); ?>');">
 	<? } else { ?>
-	<section class="hero section-md" style="background-image: url('<?php the_field("default_sub_page_header_image", "option"); ?>');">
+		<section class="hero section-md" style="background-image: url('<?php the_field("default_sub_page_header_image", "option"); ?>');">
 	<? } ?>
 		<div class="container">
 			<div class="row align-items-end">

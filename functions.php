@@ -470,6 +470,33 @@ function dimox_breadcrumbs() {
 }
 
 
+//Modify TinyMCE editor to hide H1. 
+function tiny_mce_remove_unused_formats( $initFormats ) {
+    // Add block format elements you want to show in dropdown
+    $initFormats['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;';
+    return $initFormats;
+}
+add_filter( 'tiny_mce_before_init', 'tiny_mce_remove_unused_formats' );
+
+
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function wpdocs_theme_add_editor_styles() {
+    add_editor_style( get_template_directory_uri() . '/assets/css/global.css' );
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+
+
+// Update CSS within in Admin
+function admin_style() {
+  wp_enqueue_style('admin-styles', get_template_directory_uri().'/assets/css/admin.css');
+}
+add_action('admin_enqueue_scripts', 'admin_style');
+
+
+
 /**
  * Filter the except length to 20 words.
  *
