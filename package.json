@@ -30,6 +30,7 @@
 		"gulp-sass": "^4.1.0",
 		"gulp-sass-bulk-import": "^1.0.1",
 		"gulp-sass-glob": "^1.1.0",
+		"gulp-uglifycss": "^1.1.0",
 		"gulp-useref": "^5.0.0",
 		"node-sass": "^4.13.0"
 	}

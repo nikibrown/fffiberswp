@@ -4,6 +4,7 @@ const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const fileinclude = require('gulp-file-include');
 const sassGlob = require('gulp-sass-glob');
+const uglifycss = require('gulp-uglifycss');
 
 // browserSync.init({
 //     server: {
@@ -17,6 +18,10 @@ function style() {
         .src('assets/scss/global.scss')
         .pipe(sassGlob())
         .pipe(sass())
+		.pipe(uglifycss({
+      		"maxLineLen": 0,
+      		"uglyComments": true
+    		}))
         .on('error', sass.logError)
         .pipe(gulp.dest('assets/css'));
 }
