@@ -24,6 +24,18 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 	<?php wp_head(); ?>
+
+	<?php 
+		global $post; 
+		$post_id = $post->ID; 
+	?>
+
+	<style>
+		/* Current page styling for sidebar */
+		.page-id-<?php echo $post_id; ?> .page-id-<?php echo $post_id; ?> a {
+			color: #cc3256;
+		}
+	</style>
 </head>
 
 <body <?php body_class(); ?>>

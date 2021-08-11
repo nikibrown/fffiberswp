@@ -128,7 +128,8 @@ nav.navbar {
             }
         }
 
-		&.current_page_ancestor > a {
+		&.current_page_ancestor > a,
+		&.current_page_item > a {
 			color: $brand-red;
 			&:before {
             	color: $brand-red;
