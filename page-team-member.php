@@ -18,15 +18,19 @@
 
 <?php get_header();?>
 
-<section class="hero section-md" style="background-image: url('https://nikibrown.github.io/fffibers/assets/img/hero.jpg');">
-	<div class="container">
-		<div class="row align-items-end">
-			<div class="col-lg-12">
-				<h1>General Subpage</h1>
+<?php if( get_field('header_image') ) { ?>
+	<section class="hero section-md" style="background-image: url('<?php the_field("header_image"); ?>');">
+<? } else { ?>
+	<section class="hero section-md" style="background-image: url('<?php the_field("default_sub_page_header_image", "option"); ?>');">
+<? } ?>
+		<div class="container">
+			<div class="row align-items-end">
+				<div class="col-lg-12">
+					<h1><?php the_title(); ?></h1>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
 <?php get_template_part( 'template-parts/breadcrumbs'); ?>
 
