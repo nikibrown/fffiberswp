@@ -78,6 +78,7 @@
 				$('.home-slider').slick({
 					autoplay: true,
 					autoplaySpeed: 5000,
+					fade: true,
 					dots: true,
 					arrows: false,
 					infinite: true
