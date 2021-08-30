@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-lg-9">
-				<h2><?php the_field("cta_banner_headline"); ?>?</h2>
+				<h2><?php the_field("cta_banner_headline"); ?></h2>
 				<?php the_field("cta_banner_text"); ?>
 			</div>
 			<div class="col-lg-3">
