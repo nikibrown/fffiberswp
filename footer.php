@@ -23,11 +23,8 @@
 					</div>
 					<div class="col-lg-3">
 						<ul class="list-inline social-nav text-lg-right">
-							<?php if( get_field('facebook_url', 'option') ): ?>
-								<li class="list-inline-item"><a href="<?php the_field('facebook_url', 'option'); ?>" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a></li>
-							<?php endif; ?>
-							<?php if( get_field('twitter_url', 'option') ): ?>
-								<li class="list-inline-item"><a href="<?php the_field('twitter_url', 'option'); ?>" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+							<?php if( get_field('linkedin_url', 'option') ): ?>
+								<li class="list-inline-item"><a href="<?php the_field('linkedin_url', 'option'); ?>" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></li>
 							<?php endif; ?>
 						</ul>
 					</div>
