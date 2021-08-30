@@ -53,18 +53,16 @@
 				$product_category_link = get_sub_field('product_category_link');
 				$product_category_link_url = $product_category_link['url'];
 				$product_category_link_title = $product_category_link['title'];
-
 				$product_banner_color = get_sub_field('product_banner_color');
-				
 			?>
 
 			<section class="product <?php echo $product_banner_color; ?>">
 				<div class="container">
 					<div class="row row-min-height">
-						<div class="offset-lg-1 col-lg-4">
+						<div class="offset-lg-1 col-md-5">
 							<div class="product-img" style="background-image: url('<?php echo $product_category_image; ?>');"></div>
 						</div>
-						<div class="col-lg-7">
+						<div class="col-md-6">
 							<div class="text-content">
 								<div class="text-content-inner">
 									<h2><?php echo $product_category_headline; ?></h2>

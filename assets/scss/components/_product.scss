@@ -23,19 +23,19 @@
 
 .row {
 	&.row-min-height {
-		min-height: 340px;
+		min-height: 450px;
 	}
 }
 
 .product-img {
 	background-size: cover;
     background-position: top center;
-    min-height: 340px;
+    min-height: 450px;
 }
 
 .text-content {
 	display: flex;
 	align-items: center;
-	min-height: 340px;
+	min-height: 450px;
 	padding-left: 40px
 }
