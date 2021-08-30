@@ -60,7 +60,7 @@
 				</div><!--/.row-->
 				<div class="row">
 					<div class="col-lg-12 text-center">
-						<a href="#" class="btn btn-primary">See All News <i class="fas fa-angle-right" aria-hidden="true"></i></a>
+						<a href="<?php echo esc_url( get_page_link(88) ); ?>" class="btn btn-primary">See All News <i class="fas fa-angle-right" aria-hidden="true"></i></a>
 					</div>
 				</div>
 				
