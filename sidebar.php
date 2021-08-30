@@ -30,7 +30,8 @@
 				$id = get_the_ID();
 			
 			?>
-			<li class="<?php echo $titlelowercase . ' page-id-' . $id ?>">
+			<!--  <li class="<?php echo $titlelowercase . 'page-id-' . $id ?>"> -->
+			<li class="<?php echo 'page-id-' . $id ?>">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class><span><?php the_title(); ?></span> </a>
 			</li>
 
